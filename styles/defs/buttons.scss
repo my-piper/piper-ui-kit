@@ -1,0 +1,232 @@
+@import "../variables";
+@import "../reset";
+
+%button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.25;
+    vertical-align: middle;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    box-shadow:
+        rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 10px 30px;
+    position: relative;
+    text-decoration: none;
+    transition:
+        box-shadow 0.15s,
+        transform 0.15s;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+
+    &.with-icon {
+        padding: 10px;
+
+        .icon {
+            svg {
+                stroke: white;
+            }
+        }
+    }
+
+    &.fluid {
+        width: 100%;
+    }
+
+    .icon.left {
+        margin-right: 5px;
+    }
+
+    .icon.right {
+        margin-left: 5px;
+    }
+
+    &:focus {
+        box-shadow:
+            #3c4fe0 0 0 0 1.5px inset,
+            rgba(45, 35, 66, 0.4) 0 2px 4px,
+            rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+            #3c4fe0 0 -3px 0 inset;
+    }
+
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &.busy {
+        color: rgba(white, 0.1);
+        opacity: 0.9;
+        pointer-events: none;
+
+        .icon {
+            opacity: 0;
+        }
+
+        &:before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+            border-radius: 50%;
+            border-top: 2px solid white;
+            border-right: 2px solid transparent;
+            animation: spinner 0.6s linear infinite;
+        }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: .75;
+    }
+
+    &:not(:disabled) {
+        cursor: pointer;
+
+        &:hover {
+            box-shadow:
+                rgba(45, 35, 66, 0.4) 0 4px 8px,
+                rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+                #3c4fe0 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        &.active,
+        &:active {
+            box-shadow: #3c4fe0 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+    }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: $gutter-small;
+        padding: 0 $gutter-tiny;
+        background: rgba($primary-color, .5);
+        border-radius: $corner-small;
+        font-size: $font-size-small;
+        line-height: 1em;
+        height: calc(1em + $gutter-small);
+        aspect-ratio: 1;
+
+        &.errors {
+            background: $error-color;
+        }
+    }
+}
+
+%button-primary {
+    @extend %button;
+
+    background-image: radial-gradient(100% 100% at 100% 0,
+            #5adaff 0,
+            #5468ff 100%);
+}
+
+%button-small {
+    padding: 5px 15px;
+    font-size: 15px;
+
+    &.with-icon {
+        padding: 5px;
+    }
+}
+
+%button-fluid {
+    width: 100%;
+}
+
+%button-secondary {
+    @extend %button;
+
+    background-image: radial-gradient(100% 100% at 100% 0,
+            #999999 0,
+            #666666 100%);
+}
+
+%button-circle {
+    @include reset-button();
+
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background: $primary-light-color;
+    aspect-ratio: 1;
+    padding: 8px;
+    transition: all 0.15s;
+
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .75;
+    }
+
+    &:hover {
+        background: $primary-color;
+    }
+
+    &.faded {
+        background: rgba(255, 255, 255, 0.5);
+
+        .icon svg {
+            stroke: rgb(46, 45, 45) !important;
+        }
+    }
+
+    &.busy {
+        color: rgba(white, 0.1);
+        opacity: 0.9;
+        pointer-events: none;
+
+        .icon {
+            opacity: 0;
+        }
+
+        &:before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+            border-radius: 50%;
+            border-top: 2px solid $primary-dark-color;
+            border-right: 2px solid transparent;
+            animation: spinner 0.6s linear infinite;
+        }
+    }
+
+    .icon {
+        display: block;
+
+
+        svg {
+            stroke: $primary-dark-color !important;
+        }
+    }
+}
+
+%button-circle-small {
+    padding: 6px;
+}

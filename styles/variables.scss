@@ -1,0 +1,59 @@
+$yellow-color-50: #fff8eb;
+$yellow-color-75: #ffe3ad;
+$yellow-color-100: #fed88c;
+$yellow-color-200: #FDBA38;
+$yellow-color-300: #febb38;
+$yellow-color-400: #b28327;
+$yellow-color-500: #F57F24;
+
+$red-color: #f95741;
+
+$graphite-color-50: #eaeaea;
+$graphite-color-60: #d5d4d4;
+$graphite-color-75: #aaaaaa;
+$graphite-color-100: #878787;
+$graphite-color-200: #535353;
+$graphite-color-300: #303030;
+$graphite-color-400: #222222;
+$graphite-color-500: #1d1d1d;
+
+$primary-color: #5468ff;
+$primary-dark-color: #1b2caa;
+$primary-light-color: #a9b3ff;
+$green-color: #18e09a;
+$accent-color: orange;
+$error-color: rgb(189, 45, 45);
+
+$primary-text-color: $graphite-color-300;
+$active-text-color: $primary-dark-color;
+$secondary-text-color: $graphite-color-400;
+$control-background-color: $primary-light-color;
+
+$primary-background-color: silver;
+
+$corner-small: 4px;
+$corner-base: 8px;
+$corner-large: 16px;
+$corner-huge: 24px;
+
+$font-size-tiny: 12px;
+$font-size-small: 13px;
+$font-size-normal: 14px;
+$font-size-base: 16px;
+$font-size-big: 20px;
+$font-size-large: 24px;
+$font-size-huge: 32px;
+
+$gutter-base: 4px;
+$gutter-none: 0;
+$gutter-tiny: $gutter-base;
+$gutter-small: $gutter-base * 2;
+$gutter-normal: $gutter-base * 4;
+$gutter-big: $gutter-base * 5;
+$gutter-large: $gutter-base * 6;
+$gutter-huge: $gutter-base * 8;
+
+$primary-font-family: "JetBrains Mono", monospace;
+
+$shadow-normal: none;
+$page-background: $graphite-color-300;

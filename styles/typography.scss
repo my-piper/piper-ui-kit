@@ -1,0 +1,48 @@
+@import "variables";
+
+a {
+    cursor: pointer;
+    color: $primary-dark-color;
+
+    &.default {
+        text-decoration: underline;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        line-height: 1.25em;
+        border-bottom: 2px solid $primary-dark-color;
+
+        &.with-icon {
+
+            .icon {
+                svg {
+                    stroke: $primary-dark-color;
+                }
+
+                &.left {
+                    margin-right: $gutter-small;
+                }
+
+                &.right {
+                    margin-left: $gutter-small;
+                }
+            }
+        }
+
+        &:visited {
+            color: $primary-dark-color;
+        }
+    }
+}
+
+.informer.errors {
+    @include vertical-stack();
+    color: white;
+    font-size: $font-size-big;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}

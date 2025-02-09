@@ -1,0 +1,56 @@
+@import "variables";
+@import "reset";
+@import "defs/buttons";
+
+button.primary,
+a.primary {
+  @extend %button-primary;
+
+  &.small {
+    @extend %button-small;
+  }
+
+  &.fluid {
+    @extend %button-fluid;
+  }
+
+  &:visited {
+    color: white;
+  }
+}
+
+button.transparent {
+  @include reset-button();
+  background-color: transparent;
+
+  .icon {
+    display: block;
+
+
+    svg {
+      stroke: $primary-dark-color !important;
+    }
+  }
+}
+
+button.secondary,
+a.secondary {
+  @extend %button-secondary;
+}
+
+button.delete-button,
+a.delete-button {
+  @extend %button;
+  background-image: radial-gradient(100% 100% at 100% 0,
+      #ff649a 0,
+      #ff2a6a 100%);
+}
+
+button.circle,
+a.circle {
+  @extend %button-circle;
+
+  &.small {
+    @extend %button-circle-small;
+  }
+}

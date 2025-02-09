@@ -1,0 +1,116 @@
+@import "reset";
+@import "variables";
+@import "animations";
+@import "mixins";
+
+.menu {
+    @include horizontal-stack();
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+
+        button {
+            @include reset-button();
+        }
+
+        a {
+            @include reset-link();
+        }
+
+        button,
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $primary-dark-color;
+            line-height: 1.45em;
+            padding-top: 4px;
+            border-bottom: 2px solid transparent;
+
+            &.with-icon {
+
+                .icon {
+                    svg {
+                        stroke: $primary-dark-color;
+                    }
+
+                    &.left {
+                        margin-right: $gutter-small;
+                    }
+
+                    &.right {
+                        margin-left: $gutter-small;
+                    }
+                }
+            }
+
+            &.active {
+                border-color: $primary-dark-color;
+            }
+        }
+    }
+}
+
+.context-menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        line-height: 1.5rem;
+
+        button {
+            @include reset-button();
+        }
+
+        a {
+            @extend %reset-link;
+        }
+
+        button,
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: $primary-text-color;
+            cursor: pointer;
+            padding: $gutter-small;
+            white-space: nowrap;
+            width: 100%;
+
+            &.busy {
+                @include busy-animation();
+            }
+
+            .icon {
+                svg {
+                    stroke: $primary-text-color;
+                }
+
+                &.right {
+                    margin-left: $gutter-small;
+                }
+
+                &.left {
+                    margin-right: $gutter-small;
+                }
+            }
+
+            &:hover {
+                color: $active-text-color;
+
+                .icon {
+                    svg {
+                        stroke: $active-text-color;
+                    }
+                }
+            }
+        }
+    }
+}

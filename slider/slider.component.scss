@@ -1,0 +1,35 @@
+@import 'src/ui-kit/styles/variables';
+@import 'src/ui-kit/styles/mixins';
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+input[type=range] {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 8px;
+  background: $graphite-color-60;
+  border-radius: 5px;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: $primary-color;
+    border-radius: $corner-small;
+    cursor: pointer;
+  }
+}
+
+input[type=number] {
+  margin-left: $gutter-small;
+  border: 2px solid $primary-color;
+  border-radius: $corner-small;
+  padding: $gutter-tiny;
+  width: 60px;
+  text-align: right;
+}
