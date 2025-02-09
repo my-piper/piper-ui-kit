@@ -51,6 +51,16 @@
             &.active {
                 border-color: $primary-dark-color;
             }
+
+            .badge {
+                margin-left: $gutter-small;
+                background: $primary-light-color;
+                line-height: 1.35em;
+                vertical-align: middle;
+                font-size: .75em;
+                padding: 0 $gutter-tiny;
+                border-radius: $corner-small;
+            }
         }
     }
 }
@@ -102,7 +112,8 @@
                 }
             }
 
-            &:hover {
+            &:hover,
+            &.active {
                 color: $active-text-color;
 
                 .icon {
