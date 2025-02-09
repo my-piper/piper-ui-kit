@@ -18,6 +18,11 @@
   background: white;
   position: relative;
 
+  &.disabled {
+    opacity: .75;
+    pointer-events: none;
+  }
+
   header {
     margin: $gutter-small 0;
 

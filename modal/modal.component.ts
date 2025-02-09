@@ -16,8 +16,8 @@ import {
   ViewContainerRef,
 } from "@angular/core";
 import { filter, takeUntil } from "rxjs/operators";
-import { UI } from "src/consts/ui";
 import { UntilDestroyed } from "src/helpers/until-destroyed";
+import { UI } from "../consts";
 import { ModalService } from "./modal.service";
 import { ModalClosedReason, ModalContent, ModalOptions } from "./modal.types";
 
