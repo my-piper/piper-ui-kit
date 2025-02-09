@@ -5,6 +5,7 @@ import { IconComponent } from "./icon/icon.component";
 import { InformerComponent } from "./informer/informer.component";
 import { ModalComponent } from "./modal/modal.component";
 import { ModalDirective } from "./modal/modal.directive";
+import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
 import { PopoverComponent } from "./popover/popover.component";
 import { PopoverDirective } from "./popover/popover.directive";
 import { SliderComponent } from "./slider/slider.component";
@@ -20,6 +21,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     PopoverDirective,
     SliderComponent,
     TabsComponent,
+    InvalidFieldPipe,
   ],
   exports: [
     IconComponent,
@@ -30,6 +32,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     PopoverDirective,
     SliderComponent,
     TabsComponent,
+    InvalidFieldPipe,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })

@@ -15,8 +15,8 @@ import {
   ViewChild,
   ViewContainerRef,
 } from "@angular/core";
-import { Breakpoint } from "src/enums/breakpoint";
-import { BreakpointService } from "src/services/breakpoint.service";
+import { Breakpoint } from "../enums";
+import { BreakpointService } from "../services/breakpoint.service";
 import { PopoverService } from "./popover.service";
 import { Behavior, Feature, Placement, Position, Triggers } from "./types";
 
