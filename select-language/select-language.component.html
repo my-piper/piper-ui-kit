@@ -1,0 +1,119 @@
+<ul>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.en | getUrl"
+       (click)="setLanguage($event, langs.en)"
+       [class.active]="lang === langs.en">
+      <app-icon [icon]="'usa'"></app-icon>
+      <span>English</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.ru | getUrl"
+       (click)="setLanguage($event, langs.ru)"
+       [class.active]="lang === langs.ru">
+      <app-icon [icon]="'russia'"></app-icon>
+      <span>Русский</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.de | getUrl"
+       (click)="setLanguage($event, langs.de)"
+       [class.active]="lang === langs.de">
+      <app-icon [icon]="'germany'"></app-icon>
+      <span>Deutsch</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.es | getUrl"
+       (click)="setLanguage($event, langs.es)"
+       [class.active]="lang === langs.es">
+      <app-icon [icon]="'spain'"></app-icon>
+      <span>Español</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.ptBR | getUrl"
+       (click)="setLanguage($event, langs.ptBR)"
+       [class.active]="lang === langs.ptBR">
+      <app-icon [icon]="'portugal'"></app-icon>
+      <span>Português</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.fr | getUrl"
+       (click)="setLanguage($event, langs.fr)"
+       [class.active]="lang === langs.fr">
+      <app-icon [icon]="'france'"></app-icon>
+      <span>Français</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.ja | getUrl"
+       (click)="setLanguage($event, langs.ja)"
+       [class.active]="lang === langs.ja">
+      <app-icon [icon]="'japan'"></app-icon>
+      <span>日本語</span>
+    </a>
+  </li>
+  <li>
+    <a  class="stack horizontal align-center small"
+        [href]="langs.ko | getUrl"
+        (click)="setLanguage($event, langs.ko)"
+        [class.active]="lang === langs.ko">
+      <app-icon [icon]="'south-korea'"></app-icon>
+      <span>한국어</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.zhCN | getUrl"
+       (click)="setLanguage($event, langs.zhCN)"
+       [class.active]="lang === langs.zhCN">
+      <app-icon [icon]="'china'"></app-icon>
+      <span>简体中文</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.zhTW | getUrl"
+       (click)="setLanguage($event, langs.zhTW)"
+       [class.active]="lang === langs.zhTW">
+      <app-icon [icon]="'china'"></app-icon>
+      <span>繁體中文</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.hi | getUrl"
+       (click)="setLanguage($event, langs.hi)"
+       [class.active]="lang === langs.hi">
+      <app-icon [icon]="'india'"></app-icon>
+      <span>हिंदी</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.tr | getUrl"
+       (click)="setLanguage($event, langs.tr)"
+       [class.active]="lang === langs.tr">
+      <app-icon [icon]="'turkey'"></app-icon>
+      <span>Türkçe</span>
+    </a>
+  </li>
+  <li>
+    <a class="stack horizontal align-center small"
+       [href]="langs.it | getUrl"
+       (click)="setLanguage($event, langs.it)"
+       [class.active]="lang === langs.it">
+      <app-icon [icon]="'italy'"></app-icon>
+      <span>Italiana</span>
+    </a>
+  </li>
+</ul>

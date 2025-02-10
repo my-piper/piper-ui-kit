@@ -3,10 +3,13 @@
 @import "defs/buttons";
 
 button.primary,
-a.primary {
+button.primary-button,
+a.primary,
+a.primary-button {
   @extend %button-primary;
 
-  &.small {
+  &.small,
+  &.small-button {
     @extend %button-small;
   }
 
