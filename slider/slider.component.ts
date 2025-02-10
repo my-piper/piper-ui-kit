@@ -13,8 +13,8 @@ import {
   NG_VALUE_ACCESSOR,
 } from "@angular/forms";
 import { takeUntil } from "rxjs/operators";
-import { UntilDestroyed } from "src/ui-kit/helpers/until-destroyed";
 import { UI } from "../consts";
+import { UntilDestroyed } from "../helpers/until-destroyed";
 
 @Component({
   selector: "app-slider",

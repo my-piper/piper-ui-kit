@@ -1,6 +1,6 @@
 import { Location } from "@angular/common";
 import { Pipe, PipeTransform } from "@angular/core";
-import { Langs } from "src/enums/langs";
+import { Langs } from "src/ui-kit/enums/langs";
 
 @Pipe({ name: "getUrl" })
 export class GetUrlPipe implements PipeTransform {

@@ -1,0 +1,11 @@
+<ng-container [formGroup]="form">
+  <select
+    [style.width.px]="width"
+    formControlName="country"
+    class="select-primary"
+  >
+    <option *ngFor="let c of countries" [ngValue]="c.code">
+      {{ c.label }}
+    </option>
+  </select>
+</ng-container>

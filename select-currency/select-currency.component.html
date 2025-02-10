@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <div class="stack vertical align-stretch">
+    <select formControlName="currency" class="select-primary">
+      <optgroup *ngFor="let r of regions" [label]="r.name">
+        <option *ngFor="let c of r.items" [ngValue]="c.code">
+          {{ c.label }}
+        </option>
+      </optgroup>
+    </select>
+  </div>
+</form>

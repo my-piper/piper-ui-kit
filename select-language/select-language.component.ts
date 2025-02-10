@@ -1,8 +1,8 @@
 import { DOCUMENT, Location } from "@angular/common";
 import { Component, Inject } from "@angular/core";
 import cookie from "cookiejs";
-import { Langs } from "src/enums/langs";
-import { CURRENT_LANG } from "src/providers/current-lang";
+import { Langs } from "../enums/langs";
+import { CURRENT_LANG } from "../providers/current-lang";
 
 export const LANG_KEY = "lang";
 const COOKIE_PATH = "/";
