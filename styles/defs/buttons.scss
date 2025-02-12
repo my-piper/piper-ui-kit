@@ -113,24 +113,6 @@
             transform: translateY(2px);
         }
     }
-
-    .badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: $gutter-small;
-        padding: 0 $gutter-tiny;
-        background: rgba($primary-color, .5);
-        border-radius: $corner-small;
-        font-size: $font-size-small;
-        line-height: 1em;
-        height: calc(1em + $gutter-small);
-        aspect-ratio: 1;
-
-        &.errors {
-            background: $error-color;
-        }
-    }
 }
 
 %button-primary {
