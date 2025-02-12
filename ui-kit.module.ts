@@ -8,7 +8,7 @@ import { ModalDirective } from "./modal/modal.directive";
 import { CountdownPipe } from "./pipes/countdown.pipe";
 import { DistancePipe } from "./pipes/distance.pipe";
 import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
-import { I18nPipe } from "./pipes/label";
+import { I18nPipe } from "./pipes/i18n.pipe";
 import { PopoverComponent } from "./popover/popover.component";
 import { PopoverDirective } from "./popover/popover.directive";
 import { GetUrlPipe } from "./select-language/get-url-by-lang.pipe";
