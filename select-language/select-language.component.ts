@@ -23,7 +23,7 @@ export class SelectLanguageComponent {
 
   setLanguage(e: MouseEvent, lang: Langs) {
     e.preventDefault();
-    cookie(lang, { expires: 365, path: COOKIE_PATH });
+    cookie("language", lang, { expires: 365, path: COOKIE_PATH });
     const slug = lang.toLowerCase();
     this.document.location = `/${slug}${this.location.path()}`;
   }
