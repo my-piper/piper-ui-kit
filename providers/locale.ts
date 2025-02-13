@@ -1,30 +1,30 @@
-import { Langs } from "../enums/langs";
+import { Languages } from "../enums/languages";
 
-export function localeFactory(currentLang: Langs) {
+export function localeFactory(currentLang: Languages) {
   switch (currentLang) {
-    case Langs.ru:
+    case Languages.ru:
       return "ru";
-    case Langs.de:
+    case Languages.de:
       return "de";
-    case Langs.es:
+    case Languages.es:
       return "es";
-    case Langs.ptBR:
+    case Languages.ptBR:
       return "pt";
-    case Langs.fr:
+    case Languages.fr:
       return "fr";
-    case Langs.ko:
+    case Languages.ko:
       return "ko";
-    case Langs.zhCN:
+    case Languages.zhCN:
       return "zh";
-    case Langs.zhTW:
+    case Languages.zhTW:
       return "zh";
-    case Langs.hi:
+    case Languages.hi:
       return "hi";
-    case Langs.tr:
+    case Languages.tr:
       return "tr";
-    case Langs.it:
+    case Languages.it:
       return "it";
-    case Langs.en:
+    case Languages.en:
     default:
       return "en";
   }

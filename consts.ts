@@ -1,6 +1,6 @@
 import { Countries } from "src/ui-kit/enums/countries";
 import { Currencies } from "src/ui-kit/enums/currencies";
-import { Langs } from "src/ui-kit/enums/langs";
+import { Languages } from "src/ui-kit/enums/languages";
 
 export const UI_DELAY = 250;
 
@@ -39,22 +39,22 @@ export const UI = {
   },
 };
 export const DEFAULT_COUNTRY = Countries.us;
-export const LANGS = [
-  Langs.en,
-  Langs.ru,
-  Langs.de,
-  Langs.es,
-  Langs.ptBR,
-  Langs.fr,
-  Langs.ja,
-  Langs.ko,
-  Langs.zhCN,
-  Langs.zhTW,
-  Langs.hi,
-  Langs.tr,
-  Langs.it,
+export const ALL_LANGUAGES = [
+  Languages.en,
+  Languages.ru,
+  Languages.de,
+  Languages.es,
+  Languages.ptBR,
+  Languages.fr,
+  Languages.ja,
+  Languages.ko,
+  Languages.zhCN,
+  Languages.zhTW,
+  Languages.hi,
+  Languages.tr,
+  Languages.it,
 ];
-export const DEFAULT_LANG = Langs.en;
+export const DEFAULT_LANG = Languages.en;
 
 export const CURRENCIES = [
   Currencies.usd,
@@ -262,7 +262,7 @@ export const CURRENCIES_REGIONS = [
 export const ALL_COUNTIES: {
   [key: string]: { code: string; label: string }[];
 } = {
-  [Langs.en]: [
+  [Languages.en]: [
     { code: "US", label: "United States" },
     { code: "RU", label: "Russia" },
     { code: "DE", label: "Germany" },
@@ -514,7 +514,7 @@ export const ALL_COUNTIES: {
     { code: "ZM", label: "Zambia" },
     { code: "ZW", label: "Zimbabwe" },
   ],
-  [Langs.ru]: [
+  [Languages.ru]: [
     { code: "US", label: "США" },
     { code: "RU", label: "Россия" },
     { code: "DE", label: "Германия" },

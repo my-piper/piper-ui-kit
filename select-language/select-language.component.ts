@@ -1,7 +1,7 @@
 import { DOCUMENT, Location } from "@angular/common";
 import { Component, Inject } from "@angular/core";
 import cookie from "cookiejs";
-import { Langs } from "../enums/langs";
+import { Languages } from "../enums/languages";
 import { CURRENT_LANG } from "../providers/current-lang";
 
 export const LANG_KEY = "lang";
@@ -13,15 +13,15 @@ const COOKIE_PATH = "/";
   styleUrls: ["./select-language.component.scss"],
 })
 export class SelectLanguageComponent {
-  langs = Langs;
+  languages = Languages;
 
   constructor(
-    @Inject(CURRENT_LANG) public lang: Langs,
+    @Inject(CURRENT_LANG) public lang: Languages,
     @Inject(DOCUMENT) private document: Document,
     private location: Location
   ) {}
 
-  setLanguage(e: MouseEvent, lang: Langs) {
+  setLanguage(e: MouseEvent, lang: Languages) {
     e.preventDefault();
     cookie("language", lang, { expires: 365, path: COOKIE_PATH });
     const slug = lang.toLowerCase();

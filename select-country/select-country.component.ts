@@ -5,7 +5,7 @@ import parse from "url-parse";
 import { ALL_COUNTIES, CURRENCIES_FOR_COUNTRIES } from "../consts";
 import { Countries } from "../enums/countries";
 import { Currencies } from "../enums/currencies";
-import { Langs } from "../enums/langs";
+import { Languages } from "../enums/languages";
 import { CURRENT_COUNTRY } from "../providers/current-country";
 import { CURRENT_LANG } from "../providers/current-lang";
 
@@ -15,7 +15,7 @@ import { CURRENT_LANG } from "../providers/current-lang";
   styleUrls: ["./select-country.component.scss"],
 })
 export class SelectCountryComponent implements OnInit {
-  countries = ALL_COUNTIES[this.lang] || ALL_COUNTIES[Langs.en];
+  countries = ALL_COUNTIES[this.lang] || ALL_COUNTIES[Languages.en];
 
   @Input()
   width: number;
@@ -26,7 +26,7 @@ export class SelectCountryComponent implements OnInit {
   });
 
   constructor(
-    @Inject(CURRENT_LANG) private lang: Langs,
+    @Inject(CURRENT_LANG) private lang: Languages,
     @Inject(CURRENT_COUNTRY) private country: Countries,
     @Inject(DOCUMENT) private document: Document,
     private fb: FormBuilder,

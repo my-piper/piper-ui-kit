@@ -1,12 +1,12 @@
 import { Location } from "@angular/common";
 import { Pipe, PipeTransform } from "@angular/core";
-import { Langs } from "src/ui-kit/enums/langs";
+import { Languages } from "src/ui-kit/enums/languages";
 
 @Pipe({ name: "getUrl" })
 export class GetUrlPipe implements PipeTransform {
   constructor(private location: Location) {}
 
-  transform(lang: Langs): string {
+  transform(lang: Languages): string {
     const slug = lang.toLowerCase();
     return `/${slug}${this.location.path()}`;
   }

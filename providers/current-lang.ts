@@ -1,48 +1,48 @@
 import { InjectionToken } from "@angular/core";
-import { LANGS } from "../consts";
-import { Langs } from "../enums/langs";
+import { ALL_LANGUAGES } from "../consts";
+import { Languages } from "../enums/languages";
 
-export const CURRENT_LANG = new InjectionToken<Langs>("current_lang");
+export const CURRENT_LANG = new InjectionToken<Languages>("current_lang");
 export const LANG_KEY = "lang";
 
 export function currentLangFactory(baseHref: string) {
   {
-    let lang = localStorage.getItem(LANG_KEY) as Langs;
-    if (!!lang && LANGS.includes(lang)) {
+    let lang = localStorage.getItem(LANG_KEY) as Languages;
+    if (!!lang && ALL_LANGUAGES.includes(lang)) {
       return lang;
     }
   }
 
   switch (baseHref) {
     case "/ru/":
-      return Langs.ru;
+      return Languages.ru;
     case "/de/":
-      return Langs.de;
+      return Languages.de;
     case "/es/":
-      return Langs.es;
+      return Languages.es;
     case "/pt-BR/":
     case "/pt-br/":
-      return Langs.ptBR;
+      return Languages.ptBR;
     case "/fr/":
-      return Langs.fr;
+      return Languages.fr;
     case "/ja/":
-      return Langs.ja;
+      return Languages.ja;
     case "/ko/":
-      return Langs.ko;
+      return Languages.ko;
     case "/zh-CN/":
     case "/zh-cn/":
-      return Langs.zhCN;
+      return Languages.zhCN;
     case "/zh-TW/":
     case "/zh-tw/":
-      return Langs.zhTW;
+      return Languages.zhTW;
     case "/hi/":
-      return Langs.hi;
+      return Languages.hi;
     case "/tr/":
-      return Langs.tr;
+      return Languages.tr;
     case "/it/":
-      return Langs.it;
+      return Languages.it;
     case "/en/":
     default:
-      return Langs.en;
+      return Languages.en;
   }
 }
