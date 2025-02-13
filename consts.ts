@@ -54,6 +54,7 @@ export const LANGS = [
   Langs.tr,
   Langs.it,
 ];
+export const DEFAULT_LANG = Langs.en;
 
 export const CURRENCIES = [
   Currencies.usd,
