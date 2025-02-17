@@ -2,7 +2,7 @@ import { DOCUMENT, Location } from "@angular/common";
 import { Component, Inject } from "@angular/core";
 import cookie from "cookiejs";
 import { Languages } from "../enums/languages";
-import { CURRENT_LANG } from "../providers/current-lang";
+import { CURRENT_LANG } from "../providers/current-language";
 
 export const LANG_KEY = "lang";
 const COOKIE_PATH = "/";

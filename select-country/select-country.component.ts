@@ -7,7 +7,7 @@ import { Countries } from "../enums/countries";
 import { Currencies } from "../enums/currencies";
 import { Languages } from "../enums/languages";
 import { CURRENT_COUNTRY } from "../providers/current-country";
-import { CURRENT_LANG } from "../providers/current-lang";
+import { CURRENT_LANG } from "../providers/current-language";
 
 @Component({
   selector: "app-select-country",

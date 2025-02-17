@@ -3,7 +3,7 @@ import { trim } from "lodash";
 import { parse } from "qs";
 import { Languages } from "src/ui-kit/enums/languages";
 import { DEFAULT_LANG } from "../consts";
-import { CURRENT_LANG } from "../providers/current-lang";
+import { CURRENT_LANG } from "../providers/current-language";
 
 @Pipe({ name: "i18n" })
 export class I18nPipe implements PipeTransform {

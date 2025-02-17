@@ -3,13 +3,13 @@ import { ALL_LANGUAGES } from "../consts";
 import { Languages } from "../enums/languages";
 
 export const CURRENT_LANG = new InjectionToken<Languages>("current_lang");
-export const LANG_KEY = "lang";
+export const LANGUAGE_KEY = "language";
 
 export function currentLangFactory(baseHref: string) {
   {
-    let lang = localStorage.getItem(LANG_KEY) as Languages;
-    if (!!lang && ALL_LANGUAGES.includes(lang)) {
-      return lang;
+    let language = localStorage.getItem(LANGUAGE_KEY) as Languages;
+    if (!!language && ALL_LANGUAGES.includes(language)) {
+      return language;
     }
   }
 
