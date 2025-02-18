@@ -2,7 +2,9 @@ import { InjectionToken } from "@angular/core";
 import { ALL_LANGUAGES } from "../consts";
 import { Languages } from "../enums/languages";
 
-export const CURRENT_LANG = new InjectionToken<Languages>("current_lang");
+export const CURRENT_LANGUAGE = new InjectionToken<Languages>(
+  "current_language"
+);
 export const LANGUAGE_KEY = "language";
 
 export function currentLangFactory(baseHref: string) {

@@ -53,11 +53,13 @@
             }
 
             .badge {
-                margin-left: $gutter-small;
-                line-height: 1.35em;
-                vertical-align: middle;
-                font-size: .75em;
-                padding: 0 $gutter-tiny;
+                @include reset-div();
+                font-size: .85em;
+
+                &::before {
+                    content: '|';
+                    margin: 0 $gutter-tiny;
+                }
             }
         }
     }
@@ -78,7 +80,7 @@
         }
 
         a {
-            @extend %reset-link;
+            @include reset-link();
         }
 
         button,

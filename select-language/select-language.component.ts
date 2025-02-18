@@ -2,7 +2,7 @@ import { DOCUMENT, Location } from "@angular/common";
 import { Component, Inject } from "@angular/core";
 import cookie from "cookiejs";
 import { Languages } from "../enums/languages";
-import { CURRENT_LANG } from "../providers/current-language";
+import { CURRENT_LANGUAGE } from "../providers/current-language";
 
 export const LANG_KEY = "lang";
 const COOKIE_PATH = "/";
@@ -16,7 +16,7 @@ export class SelectLanguageComponent {
   languages = Languages;
 
   constructor(
-    @Inject(CURRENT_LANG) public lang: Languages,
+    @Inject(CURRENT_LANGUAGE) public lang: Languages,
     @Inject(DOCUMENT) private document: Document,
     private location: Location
   ) {}

@@ -30,25 +30,27 @@
     font-family: "JetBrains Mono", monospace;
 
     &.with-icon {
-        padding: 10px;
+        &.only-icon {
+            padding: 10px;
+        }
 
         .icon {
             svg {
                 stroke: white;
+            }
+
+            &.left {
+                margin-right: 5px;
+            }
+
+            &.right {
+                margin-left: 5px;
             }
         }
     }
 
     &.fluid {
         width: 100%;
-    }
-
-    .icon.left {
-        margin-right: 5px;
-    }
-
-    .icon.right {
-        margin-left: 5px;
     }
 
     &:focus {
