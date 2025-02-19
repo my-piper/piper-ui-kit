@@ -38,7 +38,7 @@ export const ALL_LANGUAGES = [
   Languages.tr,
   Languages.it,
 ];
-export const DEFAULT_LANG = Languages.en;
+export const DEFAULT_LANGUAGE = Languages.en;
 
 export const CURRENCIES = [
   Currencies.usd,
