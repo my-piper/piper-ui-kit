@@ -1,14 +1,15 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
+import { IncludesPipe } from "src/ui-kit/pipes/includes.pipe";
 import { IconComponent } from "./icon/icon.component";
 import { InformerComponent } from "./informer/informer.component";
 import { ModalComponent } from "./modal/modal.component";
 import { ModalDirective } from "./modal/modal.directive";
 import { CountdownPipe } from "./pipes/countdown.pipe";
 import { DistancePipe } from "./pipes/distance.pipe";
-import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
 import { I18nPipe } from "./pipes/i18n.pipe";
+import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
 import { PopoverComponent } from "./popover/popover.component";
 import { PopoverDirective } from "./popover/popover.directive";
 import { GetUrlPipe } from "./select-language/get-url-by-lang.pipe";
@@ -34,6 +35,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     DistancePipe,
     CountdownPipe,
     I18nPipe,
+    IncludesPipe,
   ],
   exports: [
     IconComponent,
@@ -50,6 +52,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     DistancePipe,
     CountdownPipe,
     I18nPipe,
+    IncludesPipe,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })
