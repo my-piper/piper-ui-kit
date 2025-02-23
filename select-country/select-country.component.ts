@@ -7,7 +7,7 @@ import { Countries } from "../enums/countries";
 import { Currencies } from "../enums/currencies";
 import { Languages } from "../enums/languages";
 import { CURRENT_COUNTRY } from "../providers/current-country";
-import { CURRENT_LANG } from "../providers/current-language";
+import { CURRENT_LANGUAGE } from "../providers/current-language";
 
 @Component({
   selector: "app-select-country",
@@ -26,7 +26,7 @@ export class SelectCountryComponent implements OnInit {
   });
 
   constructor(
-    @Inject(CURRENT_LANG) private lang: Languages,
+    @Inject(CURRENT_LANGUAGE) private lang: Languages,
     @Inject(CURRENT_COUNTRY) private country: Countries,
     @Inject(DOCUMENT) private document: Document,
     private fb: FormBuilder,
