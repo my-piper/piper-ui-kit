@@ -7,7 +7,7 @@
     }"
   >
     <header>
-      <h1>{{ options.title }}</h1>
+      <h1>{{ options.title | i18n }}</h1>
       <div class="close">
         <span>ESC</span>
         <button *ngIf="!options.hold" (click)="close('user')">

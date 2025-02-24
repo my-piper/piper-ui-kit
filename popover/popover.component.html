@@ -12,7 +12,7 @@
   role="popover"
   [ngStyle]="{ 'max-height': options.maxHeight, 'max-width': options.maxWidth }"
 >
-  <div data-title *ngIf="options.title">{{ options.title }}</div>
+  <div data-title *ngIf="options.title">{{ options.title | i18n }}</div>
 
   <div data-content>
     <ng-container *ngIf="!!contentText">{{ contentText }}</ng-container>
