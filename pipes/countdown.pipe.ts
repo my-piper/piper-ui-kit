@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 @Pipe({ name: "countdown" })
 export class CountdownPipe implements PipeTransform {
   prev: number = 0;
-  timer: number | null = null;
+  timer: any | null = null;
 
   transform(number: number): Observable<number> {
     clearTimeout(this.timer);
@@ -29,7 +29,6 @@ export class CountdownPipe implements PipeTransform {
       } else {
         this.prev = number;
         counter.next(number);
-        counter.complete();
       }
     };
     count();
