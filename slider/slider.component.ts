@@ -88,8 +88,9 @@ export class SliderComponent
   }
 
   writeValue(value: number) {
+    const actual = value !== undefined ? value : null;
     this.form.setValue(
-      { range: value || null, numeric: value || null },
+      { range: actual, numeric: actual },
       { emitEvent: false }
     );
     this.cd.detectChanges();
