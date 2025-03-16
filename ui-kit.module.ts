@@ -10,6 +10,7 @@ import { ModalComponent } from "./modal/modal.component";
 import { ModalDirective } from "./modal/modal.directive";
 import { CountdownPipe } from "./pipes/countdown.pipe";
 import { DistancePipe } from "./pipes/distance.pipe";
+import { FileTypePipe } from "./pipes/file-type";
 import { I18nPipe } from "./pipes/i18n.pipe";
 import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
 import { PopoverComponent } from "./popover/popover.component";
@@ -40,6 +41,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     IncludesPipe,
     InViewportDirective,
     HotKeyDirective,
+    FileTypePipe,
   ],
   exports: [
     IconComponent,
@@ -59,6 +61,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     IncludesPipe,
     InViewportDirective,
     HotKeyDirective,
+    FileTypePipe,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })
