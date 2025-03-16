@@ -42,6 +42,7 @@
     button.actions {
       @include reset-button();
       position: absolute;
+      z-index: 5;
       top: -$gutter-small;
       left: -$gutter-small;
       padding: $gutter-tiny;

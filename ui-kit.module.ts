@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { IncludesPipe } from "src/ui-kit/pipes/includes.pipe";
+import { HotKeyDirective } from "./directives/hot-key.directive";
 import { InViewportDirective } from "./directives/in-viewport.directive";
 import { IconComponent } from "./icon/icon.component";
 import { InformerComponent } from "./informer/informer.component";
@@ -38,6 +39,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     I18nPipe,
     IncludesPipe,
     InViewportDirective,
+    HotKeyDirective,
   ],
   exports: [
     IconComponent,
@@ -56,6 +58,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     I18nPipe,
     IncludesPipe,
     InViewportDirective,
+    HotKeyDirective,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })

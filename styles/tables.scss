@@ -78,14 +78,14 @@ table.default {
         td {
           position: relative;
           padding-left: 50%;
-          border-bottom: 1px solid $primary-light-color;
+
           text-align: left;
           font-size: $font-size-base;
           min-height: 48px;
           box-sizing: border-box;
 
           &:last-of-type {
-            border-bottom: 1px solid $primary-color;
+            border-bottom: 1px solid $graphite-color-60;
           }
 
           &:before {

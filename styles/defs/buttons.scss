@@ -35,7 +35,7 @@
         }
 
         .icon {
-            svg {
+            svg.stroke {
                 stroke: white;
             }
 
@@ -47,6 +47,10 @@
                 margin-left: 5px;
             }
         }
+    }
+
+    .badge {
+        margin-left: $gutter-tiny;
     }
 
     &.fluid {
@@ -170,8 +174,16 @@
     &.faded {
         background: rgba(255, 255, 255, 0.5);
 
-        .icon svg {
+        .icon svg.stroke {
             stroke: rgb(46, 45, 45) !important;
+        }
+    }
+
+    &.light {
+        background: $graphite-color-50;
+
+        &:hover {
+            background: $primary-light-color;
         }
     }
 
@@ -204,8 +216,7 @@
     .icon {
         display: block;
 
-
-        svg {
+        svg.stroke {
             stroke: $primary-dark-color !important;
         }
     }

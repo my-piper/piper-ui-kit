@@ -1,4 +1,272 @@
 <ng-container [ngSwitch]="icon">
+  <ng-container *ngSwitchCase="'image_generation'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M24.4 16.83c-.4-1.74-2.9-1.73-3.28.02a5.58 5.58 0 0 1-4.43 4.4c-1.82.31-1.82 2.92 0 3.24a5.55 5.55 0 0 1 4.43 4.4c.36 1.68 2.9 1.7 3.27.01a5.6 5.6 0 0 1 4.46-4.4c1.75-.31 1.75-2.95 0-3.26a5.68 5.68 0 0 1-4.46-4.4Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M1.83 5.84a4 4 0 0 1 4-4h14.2a4 4 0 0 1 4 4v7.9a3.66 3.66 0 0 0-4.86 2.68 3.68 3.68 0 0 1-2.22 2.7A12.76 12.76 0 0 0 3.83 13.5v5.66c0 1.1.9 2 2 2h7.9a3.82 3.82 0 0 0-.4 2h-7.5a4 4 0 0 1-4-4V5.84Zm18.88 2.44a2.82 2.82 0 1 1-5.64 0 2.82 2.82 0 0 1 5.64 0Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'video_generation'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M1.83 5.84a4 4 0 0 1 4-4h14.2a4 4 0 0 1 4 4v7.9a3.66 3.66 0 0 0-4.86 2.68 3.58 3.58 0 0 1-2.83 2.86 3.57 3.57 0 0 0-3 3.88h-7.5a4 4 0 0 1-4-4V5.84Zm8.43 10.66v-8c0-.45.52-.73.9-.5l5.97 3.65a1 1 0 0 1 0 1.7l-5.98 3.64a.59.59 0 0 1-.89-.5Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M24.4 16.83c-.4-1.74-2.9-1.73-3.28.02a5.58 5.58 0 0 1-4.43 4.4c-1.82.31-1.82 2.92 0 3.24a5.55 5.55 0 0 1 4.43 4.4c.36 1.68 2.9 1.7 3.27.01a5.6 5.6 0 0 1 4.46-4.4c1.75-.31 1.75-2.95 0-3.26a5.68 5.68 0 0 1-4.46-4.4Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'text_generation'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="m13.5 24.48-.57.01a11.55 11.55 0 1 1 11.46-10.15 3.67 3.67 0 0 0-5.22 2.52 3.58 3.58 0 0 1-2.83 2.86c-2.5.44-3.44 2.84-2.84 4.76ZM7.14 7.84a1 1 0 0 1 1-1h9.57a1 1 0 0 1 1 1V9.3a1 1 0 1 1-2 0v-.47h-2.78v8.2h.98a1 1 0 0 1 0 2H10.9a1 1 0 1 1 0-2h1.03v-8.2H9.14v.47a1 1 0 0 1-2 0V7.84Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M24.47 17.27c-.4-1.74-2.9-1.73-3.27.02a5.58 5.58 0 0 1-4.44 4.4c-1.82.32-1.82 2.93 0 3.24a5.55 5.55 0 0 1 4.43 4.4c.36 1.69 2.9 1.7 3.28.01a5.6 5.6 0 0 1 4.45-4.4c1.75-.3 1.76-2.95 0-3.25a5.68 5.68 0 0 1-4.45-4.42Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'language_translation'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        d="M8.47 20.68v5.11a4 4 0 0 0 4 4h13.22a4 4 0 0 0 4-4V12.56a4 4 0 0 0-4-4h-4.34v5.76h6.37v2h-3.3a15 15 0 0 1-3.38 5.58c1.28 1 2.93 1.9 5.08 2.5l.97.27c-.36.77-.48 1.2-.54 1.93l-.96-.27c-2.54-.71-4.5-1.8-5.99-3.02-1.73 1.53-3.77 2.72-5.75 3.04l-.99.16c0-.85-.1-1.3-.32-1.97l.99-.16c1.45-.24 3.1-1.15 4.61-2.45-.38-.41-.72-.84-1.03-1.25H8.47Z"
+      ></path>
+      <path
+        d="m19.27 20.19.3.35a13.84 13.84 0 0 0 2.74-4.22h-.95v.36a4 4 0 0 1-2.1 3.5Z"
+      ></path>
+      <path d="m11.56 8.17 1.36 4.04h-2.81l1.35-4.04h.1Z"></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M1.77 5.84a4 4 0 0 1 4-4h11.59a4 4 0 0 1 4 4v10.84a4 4 0 0 1-4 4H5.77a4 4 0 0 1-4-4V5.84Zm7.01 10.42.87-2.57h3.7l.88 2.57h2.33l-3.7-10h-2.57l-3.73 10h2.22Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'speech_synthesis'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="m13.52 15.5 8-8a11.32 11.32 0 1 0 0 16.01l-8-8.01Zm-.16-4.94a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M25.49 7.89a1 1 0 0 1 1.41 0 11 11 0 0 1 0 15.55 1 1 0 1 1-1.42-1.41 9 9 0 0 0 0-12.73 1 1 0 0 1 0-1.41Zm-3.78 3.78a1 1 0 0 1 1.41-.02 5.67 5.67 0 0 1 .04 8.06 1 1 0 1 1-1.41-1.42 3.67 3.67 0 0 0-.03-5.2 1 1 0 0 1-.01-1.42Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'3d_modeling'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="m22.32 27.79 5.32-3.08v-6.25l-5.82-3.38a1 1 0 0 1-.5-.87V7.68c0-.18-.1-.35-.25-.44l-4.81-2.8a.51.51 0 0 0-.52 0l-.5-.87.5.86-4.8 2.81a.51.51 0 0 0-.26.44v6.51a1 1 0 0 1-.5.87L4.62 18.3a.51.51 0 0 0-.25.45v5.65c0 .18.1.35.26.45l4.8 2.78c.16.09.36.09.52 0l.5.86-.5-.86 5.56-3.22a1 1 0 0 1 1 0l5.82 3.37Zm.75 1.87a1.5 1.5 0 0 1-1.5 0L16 26.44l-5.06 2.93c-.78.45-1.74.45-2.52 0l.5-.86-.5.86-4.8-2.78a2.51 2.51 0 0 1-1.26-2.18v-5.65c0-.9.47-1.72 1.24-2.17l5.08-2.97V7.68c0-.89.47-1.71 1.24-2.16l4.81-2.82a2.51 2.51 0 0 1 2.54 0l4.8 2.82a2.51 2.51 0 0 1 1.25 2.16v5.96l5.57 3.24c.47.27.75.76.75 1.3V25a1.5 1.5 0 0 1-.75 1.3l-5.82 3.36Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M16 22.59a1 1 0 0 1-1-1v-3.14l-2.66-1.54a1 1 0 0 1 1-1.73L16 16.7l2.66-1.53a1 1 0 1 1 1 1.73L17 18.45v3.14a1 1 0 0 1-1 1Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="m22.32 27.79 5.32-3.08v-6.25l-5.82-3.38a1 1 0 0 1-.5-.87V7.68c0-.18-.1-.35-.25-.44l-4.81-2.8a.51.51 0 0 0-.52 0l-4.8 2.8a.51.51 0 0 0-.26.44v6.51a1 1 0 0 1-.5.87L4.62 18.3a.51.51 0 0 0-.25.45v5.65c0 .18.1.35.26.45l4.8 2.78c.16.09.36.09.52 0l5.56-3.22a1 1 0 0 1 1 0l5.82 3.37ZM15 21.59a1 1 0 1 0 2 0v-3.14l2.66-1.54a1 1 0 0 0-1-1.73L16 16.7l-2.66-1.53a1 1 0 1 0-1 1.73L15 18.45v3.14Z"
+        fill-opacity=".1"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'object_detection'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        d="M14.83 12.09a2.74 2.74 0 0 0-2.74 2.74v6.78a2.74 2.74 0 0 0 2.74 2.75h6.78a2.74 2.74 0 0 0 2.75-2.75v-6.78a2.74 2.74 0 0 0-2.75-2.74h-6.78Z"
+      ></path>
+      <path
+        d="M10.6 7.64h6.6a2.72 2.72 0 0 1 2.71 2.71v1.74h-5.08a2.74 2.74 0 0 0-2.74 2.74v5.08h-1.74a2.72 2.72 0 0 1-2.7-2.7V10.6a2.96 2.96 0 0 1 2.95-2.96Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M3.62 3.6h4.12a1 1 0 0 0 0-2H2.62a1 1 0 0 0-1 1v5.13a1 1 0 1 0 2 0V3.6Zm19.64-1a1 1 0 0 1 1-1h5.12a1 1 0 0 1 1 1v5.13a1 1 0 1 1-2 0V3.61h-4.12a1 1 0 0 1-1-1ZM2.62 23.28a1 1 0 0 1 1 1v4.12h4.12a1 1 0 1 1 0 2H2.62a1 1 0 0 1-1-1v-5.12a1 1 0 0 1 1-1Zm26.76 0a1 1 0 0 1 1 1v5.12a1 1 0 0 1-1 1h-5.12a1 1 0 0 1 0-2h4.12v-4.12a1 1 0 0 1 1-1Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'text_analysis'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M9.05 9.65a1 1 0 0 1 1-1h11.9a1 1 0 0 1 1 1v1.83a1 1 0 0 1-2 0v-.83H17v10.7h1.47a1 1 0 1 1 0 2h-5a1 1 0 0 1 0-2H15v-10.7h-3.95v.83a1 1 0 0 1-2 0V9.65Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M3.62 3.6h4.12a1 1 0 0 0 0-2H2.62a1 1 0 0 0-1 1v5.13a1 1 0 1 0 2 0V3.6Zm19.64-1a1 1 0 0 1 1-1h5.12a1 1 0 0 1 1 1v5.13a1 1 0 1 1-2 0V3.61h-4.12a1 1 0 0 1-1-1ZM2.62 23.28a1 1 0 0 1 1 1v4.12h4.12a1 1 0 1 1 0 2H2.62a1 1 0 0 1-1-1v-5.12a1 1 0 0 1 1-1Zm26.76 0a1 1 0 0 1 1 1v5.12a1 1 0 0 1-1 1h-5.12a1 1 0 0 1 0-2h4.12v-4.12a1 1 0 0 1 1-1Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'image_editing'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M5.83 1.84a4 4 0 0 0-4 4v13.32a4 4 0 0 0 4 4h8.83v-.3c0-.64.24-1.24.66-1.7H5.83a2 2 0 0 1-2-2V13.5a12.84 12.84 0 0 1 13.28 5.88l3.74-3.7a5.85 5.85 0 0 1 3.17-1.64v-8.2a4 4 0 0 0-4-4H5.83Zm12.06 9.27a2.82 2.82 0 1 0 0-5.65 2.82 2.82 0 0 0 0 5.65Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M23.32 15.8a4.35 4.35 0 0 1 4.74 7.09l-5.4 5.45a1 1 0 0 1-.72.3h-4.78a1 1 0 0 1-1-1v-4.79a1 1 0 0 1 .3-.7l5.45-5.41c.4-.4.88-.73 1.4-.94Zm1.66 1.67a2.35 2.35 0 0 0-1.66.68l-5.16 5.12v3.37h3.37l5.11-5.16a2.35 2.35 0 0 0-1.66-4.01Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'code_generation'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M24.4 16.83c-.4-1.74-2.9-1.73-3.28.02a5.58 5.58 0 0 1-4.43 4.4c-1.82.31-1.82 2.92 0 3.24a5.55 5.55 0 0 1 4.43 4.4c.36 1.68 2.9 1.7 3.27.01a5.6 5.6 0 0 1 4.46-4.4c1.75-.31 1.75-2.95 0-3.26a5.68 5.68 0 0 1-4.46-4.4Z"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M7.06 7.94a1 1 0 0 1 1.42 0l3.44 3.44a1 1 0 0 1 0 1.42l-3.44 3.44a1 1 0 0 1-1.42-1.42L9.8 12.1 7.06 9.36a1 1 0 0 1 0-1.42Zm5.73 7.59a1 1 0 0 1 1-1h4.3a1 1 0 1 1 0 2h-4.3a1 1 0 0 1-1-1Z"
+      ></path>
+      <path
+        d="M5.83 3.84h14.2a2 2 0 0 1 2 2v7.73c.66-.1 1.36-.02 2 .23V5.84a4 4 0 0 0-4-4H5.82a4 4 0 0 0-4 4v13.32a4 4 0 0 0 4 4h7.35c-.06-.69.07-1.39.39-2H5.83a2 2 0 0 1-2-2V5.84c0-1.1.9-2 2-2Z"
+      ></path>
+    </svg>
+  </ng-container>
+
+  <!-- HF -->
+
+  <ng-container *ngSwitchCase="'yandex'">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 48 48"
+      width="48px"
+      height="48px"
+    >
+      <linearGradient
+        id="lpa7hSZqz_S376v76E9kia"
+        x1="13.239"
+        x2="37.906"
+        y1="1.907"
+        y2="33.479"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stop-color="#f52537" />
+        <stop offset=".293" stop-color="#f32536" />
+        <stop offset=".465" stop-color="#ea2434" />
+        <stop offset=".605" stop-color="#dc2231" />
+        <stop offset=".729" stop-color="#c8202c" />
+        <stop offset=".841" stop-color="#ae1e25" />
+        <stop offset=".944" stop-color="#8f1a1d" />
+        <stop offset="1" stop-color="#7a1818" />
+      </linearGradient>
+      <path
+        fill="url(#lpa7hSZqz_S376v76E9kia)"
+        d="M32,24h-7l8-18h7L32,24z M27,36.689	c0-4.168-0.953-8.357-2.758-12.117L15,6H8l10.833,21.169C20.251,30.123,21,33.415,21,36.689V42h6V36.689z"
+      />
+    </svg>
+  </ng-container>
+  <ng-container *ngSwitchCase="'google'">
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#FFC107"
+        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+      />
+      <path
+        fill="#FF3D00"
+        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+      />
+      <path
+        fill="#4CAF50"
+        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+      />
+      <path
+        fill="#1976D2"
+        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+      />
+    </svg>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'close'">
+    <svg
+      class="stroke"
+      [attr.stroke]="color"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M8 8L16 16" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16 8L8 16" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </ng-container>
+
   <ng-container *ngSwitchCase="'lang'">
     <svg
       class="stroke"
@@ -959,7 +1227,6 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill="currentColor"
         d="M48 56v144a8 8 0 0 1-16 0V56a8 8 0 0 1 16 0m92 54.5l-20 6.5V96a8 8 0 0 0-16 0v21l-20-6.5a8 8 0 0 0-5 15.22l20 6.49l-12.34 17a8 8 0 1 0 12.94 9.4l12.34-17l12.34 17a8 8 0 1 0 12.94-9.4l-12.34-17l20-6.49A8 8 0 0 0 140 110.5m106 5.14a8 8 0 0 0-10-5.14l-20 6.5V96a8 8 0 0 0-16 0v21l-20-6.49a8 8 0 0 0-4.95 15.22l20 6.49l-12.34 17a8 8 0 1 0 12.94 9.4l12.34-17l12.34 17a8 8 0 1 0 12.94-9.4l-12.34-17l20-6.49a8 8 0 0 0 5.07-10.09"
       />
     </svg>

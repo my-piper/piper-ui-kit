@@ -23,7 +23,7 @@ $primary-light-color: #a9b3ff;
 $green-color: #18e09a;
 $success-color: $green-color;
 $accent-color: orange;
-$error-color: rgb(189, 45, 45);
+$error-color: rgba($red-color, 0.75);
 
 $primary-text-color: $graphite-color-300;
 $active-text-color: $primary-dark-color;

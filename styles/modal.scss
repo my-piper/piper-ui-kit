@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .modal {
   display: flex;
@@ -11,24 +12,33 @@
   left: 0;
   background-color: rgba(black, 0.5);
   backdrop-filter: blur(5px);
+  margin: 0 !important;
 
   &.hidden {
     display: none;
   }
 
   >header {
-    margin: 20px;
+    margin: $gutter-normal;
     text-align: right;
+
+    @include less-tablet() {
+      margin: $gutter-small;
+    }
   }
 
   >.content {
-    margin: 20px;
+    margin: $gutter-normal;
     overflow: scroll;
     flex: 1;
 
+    @include less-tablet() {
+      margin: $gutter-small;
+    }
+
     &.filled {
       background-color: #f6f5fb;
-      padding: 20px;
+      padding: $gutter-normal;
       border-radius: 5px;
     }
 
