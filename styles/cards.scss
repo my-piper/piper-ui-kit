@@ -5,10 +5,6 @@
   display: grid;
   gap: $gutter-big;
   grid-template-columns: 1fr;
-
-  &.cols4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .card {
@@ -28,7 +24,7 @@
 
     h2 {
       margin: 0;
-      padding: 0;
+      padding: 0 $gutter-tiny;
       font-size: 16px;
       text-align: center;
       vertical-align: middle;
