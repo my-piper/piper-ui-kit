@@ -2,6 +2,14 @@ import { Pipe, PipeTransform } from "@angular/core";
 import { round } from "lodash";
 import { BehaviorSubject, Observable } from "rxjs";
 
+function decimalPlaces(num: number) {
+  const str = num.toString();
+  if (str.includes(".")) {
+    return str.split(".")[1].length;
+  }
+  return 0;
+}
+
 @Pipe({ name: "countdown" })
 export class CountdownPipe implements PipeTransform {
   timer: any | null = null;
@@ -14,8 +22,9 @@ export class CountdownPipe implements PipeTransform {
 
     const counter = new BehaviorSubject<number>(current);
     const count = () => {
-      current += Math.max((number - current) / 2, number > 0 ? 0.005 : -0.005);
-      current = round(current, 3);
+      const step = Math.max(Math.abs((number - current) / 2), 0.005);
+      current += (number > 0 ? 1 : -1) * step;
+      current = round(current, decimalPlaces(number));
       if (number > 0 ? current < number : current > number) {
         counter.next(current);
         this.timer = setTimeout(count, 50);
