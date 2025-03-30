@@ -21,10 +21,10 @@ export class SelectLanguageComponent {
     private location: Location
   ) {}
 
-  setLanguage(e: MouseEvent, lang: Languages) {
+  setLanguage(e: MouseEvent, language: Languages) {
     e.preventDefault();
-    cookie("language", lang, { expires: 365, path: COOKIE_PATH });
-    const slug = lang.toLowerCase();
+    cookie("language", language, { expires: 365, path: COOKIE_PATH });
+    const slug = language.toLowerCase();
     this.document.location = `/${slug}${this.location.path()}`;
   }
 }

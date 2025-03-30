@@ -9,10 +9,10 @@ import { InformerComponent } from "./informer/informer.component";
 import { ModalComponent } from "./modal/modal.component";
 import { ModalDirective } from "./modal/modal.directive";
 import { CountdownPipe } from "./pipes/countdown.pipe";
-import { DistancePipe } from "./pipes/distance.pipe";
 import { FileTypePipe } from "./pipes/file-type";
 import { I18nPipe } from "./pipes/i18n.pipe";
 import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
+import { TimePassedPipe } from "./pipes/time-passed.pipe";
 import { PopoverComponent } from "./popover/popover.component";
 import { PopoverDirective } from "./popover/popover.directive";
 import { GetUrlPipe } from "./select-language/get-url-by-lang.pipe";
@@ -35,7 +35,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     GetUrlPipe,
     SelectLanguageComponent,
     SpinnerComponent,
-    DistancePipe,
+    TimePassedPipe,
     CountdownPipe,
     I18nPipe,
     IncludesPipe,
@@ -55,7 +55,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     InvalidFieldPipe,
     SelectLanguageComponent,
     SpinnerComponent,
-    DistancePipe,
+    TimePassedPipe,
     CountdownPipe,
     I18nPipe,
     IncludesPipe,

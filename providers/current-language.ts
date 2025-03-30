@@ -1,4 +1,5 @@
 import { InjectionToken } from "@angular/core";
+import cookie from "cookiejs";
 import { ALL_LANGUAGES } from "../consts";
 import { Languages } from "../enums/languages";
 
@@ -9,7 +10,7 @@ export const LANGUAGE_KEY = "language";
 
 export function currentLangFactory(baseHref: string) {
   {
-    let language = localStorage.getItem(LANGUAGE_KEY) as Languages;
+    let language = cookie("language") as Languages;
     if (!!language && ALL_LANGUAGES.includes(language)) {
       return language;
     }

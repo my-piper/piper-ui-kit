@@ -1,14 +1,13 @@
 import { Inject, Pipe, PipeTransform } from "@angular/core";
-import { Locale } from "date-fns";
-import formatDistance from "date-fns/formatDistance";
+import { formatDistance, Locale } from "date-fns";
 import { DATE_LOCALE } from "src/ui-kit/providers/date-locale";
 
-@Pipe({ name: "distance" })
-export class DistancePipe implements PipeTransform {
+@Pipe({ name: "timePassed" })
+export class TimePassedPipe implements PipeTransform {
   constructor(@Inject(DATE_LOCALE) private locale: Locale) {}
 
-  transform(end: Date): string {
-    return formatDistance(end, new Date(), {
+  transform(date: Date): string {
+    return formatDistance(date, new Date(), {
       includeSeconds: false,
       addSuffix: true,
       locale: this.locale,
