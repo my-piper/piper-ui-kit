@@ -21,11 +21,6 @@ export class HotKeyDirective {
 
   @HostListener("document:keydown", ["$event"])
   handleKeyDown(event: KeyboardEvent) {
-    console.log(
-      this.isElementVisible(),
-      event.key.toLowerCase(),
-      this.hotKey.toLowerCase()
-    );
     if (
       this.isElementVisible() &&
       event.key.toLowerCase() === this.hotKey.toLowerCase()

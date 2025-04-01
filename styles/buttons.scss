@@ -66,6 +66,10 @@ button.transparent {
 button.secondary,
 a.secondary {
   @extend %button-secondary;
+
+  &.small {
+    @extend %button-small;
+  }
 }
 
 button.delete-button,

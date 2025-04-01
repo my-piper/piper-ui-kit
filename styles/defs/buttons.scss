@@ -130,11 +130,11 @@
 }
 
 %button-small {
-    padding: 5px 15px;
-    font-size: 15px;
+    padding: $gutter-small $gutter-normal;
+    font-size: 14px;
 
     &.with-icon {
-        padding: 5px;
+        padding: $gutter-small;
     }
 }
 
