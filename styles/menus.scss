@@ -53,13 +53,8 @@
             }
 
             .badge {
-                @include reset-div();
-                font-size: .85em;
-
-                &::before {
-                    content: '|';
-                    margin: 0 $gutter-tiny;
-                }
+                font-size: .75em;
+                margin-left: $gutter-tiny;
             }
         }
     }

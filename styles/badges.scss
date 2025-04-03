@@ -4,13 +4,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0 $gutter-tiny;
+    padding: $gutter-tiny;
     background: rgba($primary-color, .5);
     border-radius: $corner-small;
     font-size: $font-size-small;
-    line-height: 1em;
-    height: calc(1em + $gutter-small);
-    aspect-ratio: 1;
+    line-height: .85em;
 
     &.errors {
         background: $error-color;
