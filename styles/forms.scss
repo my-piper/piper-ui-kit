@@ -130,6 +130,7 @@ fieldset {
   box-sizing: border-box;
   border: 4px solid $control-background-color;
   overflow: hidden;
+  gap: $gutter-tiny;
 
   &.disabled {
     pointer-events: none;
