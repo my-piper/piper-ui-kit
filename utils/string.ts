@@ -1,5 +1,5 @@
 import { customAlphabet } from "nanoid";
 
-export function sid(): string {
-  return customAlphabet("1234567890abcdef", 10)();
+export function sid(length: number = 10): string {
+  return customAlphabet("1234567890abcdef", length)();
 }
