@@ -9,14 +9,17 @@ import { InformerComponent } from "./informer/informer.component";
 import { ModalComponent } from "./modal/modal.component";
 import { ModalDirective } from "./modal/modal.directive";
 import { CountdownPipe } from "./pipes/countdown.pipe";
-import { FileTypePipe } from "./pipes/file-type";
+import { FileTypePipe } from "./pipes/file-type.pipe";
 import { I18nPipe } from "./pipes/i18n.pipe";
 import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
+import { LengthPipe } from "./pipes/length.pipe";
+import { MockArrayPipe } from "./pipes/mock-array.pipe";
 import { TimePassedPipe } from "./pipes/time-passed.pipe";
 import { PopoverComponent } from "./popover/popover.component";
 import { PopoverDirective } from "./popover/popover.directive";
 import { GetUrlPipe } from "./select-language/get-url-by-lang.pipe";
 import { SelectLanguageComponent } from "./select-language/select-language.component";
+import { SkeletonComponent } from "./skeleton/skeleton.component";
 import { SliderComponent } from "./slider/slider.component";
 import { SpinnerComponent } from "./spinner/spinner.component";
 import { TabsComponent } from "./tabs/tabs.component";
@@ -42,6 +45,9 @@ import { TabsComponent } from "./tabs/tabs.component";
     InViewportDirective,
     HotKeyDirective,
     FileTypePipe,
+    LengthPipe,
+    SkeletonComponent,
+    MockArrayPipe,
   ],
   exports: [
     IconComponent,
@@ -62,6 +68,9 @@ import { TabsComponent } from "./tabs/tabs.component";
     InViewportDirective,
     HotKeyDirective,
     FileTypePipe,
+    LengthPipe,
+    SkeletonComponent,
+    MockArrayPipe,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })

@@ -6,6 +6,7 @@
 .menu {
     @include horizontal-stack();
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
     margin: 0;
@@ -55,6 +56,7 @@
             .badge {
                 font-size: .75em;
                 margin-left: $gutter-tiny;
+                background: $graphite-color-50;
             }
         }
     }

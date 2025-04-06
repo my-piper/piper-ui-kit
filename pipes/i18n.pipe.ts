@@ -7,7 +7,10 @@ import { getLabel } from "../utils/i18n";
 export class I18nPipe implements PipeTransform {
   constructor(@Inject(CURRENT_LANGUAGE) private language: Languages) {}
 
-  transform(source: string): string {
-    return getLabel(source, this.language);
+  transform(
+    source: string,
+    { mode }: { mode: "inline" | "multiline" } = { mode: "inline" }
+  ): string {
+    return getLabel(source, this.language, { mode });
   }
 }
