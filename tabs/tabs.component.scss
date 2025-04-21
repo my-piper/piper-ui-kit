@@ -2,7 +2,9 @@
 @import 'src/ui-kit/styles/variables';
 
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: $gutter-normal;
 
   @include wider-mobile() {
     &.centered {
@@ -23,7 +25,7 @@ ul {
   list-style: none;
   flex-wrap: wrap;
   padding: 0;
-  margin: 0 0 $gutter-large 0;
+  margin: 0;
 
   li {
     position: relative;
@@ -50,4 +52,10 @@ ul {
       }
     }
   }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }

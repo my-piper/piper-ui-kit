@@ -31,6 +31,8 @@
     margin: $gutter-normal;
     overflow: scroll;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     @include less-tablet() {
       margin: $gutter-small;
@@ -43,8 +45,6 @@
     }
 
     &.centered {
-      display: flex;
-      flex-direction: column;
       align-items: center;
     }
   }
