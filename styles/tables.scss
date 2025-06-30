@@ -51,7 +51,7 @@ table.default {
     color: gray;
     padding: 10px;
 
-    a {
+    a.default {
       text-decoration: none;
       border-bottom: 1px solid $primary-dark-color;
       padding-bottom: $gutter-tiny;
