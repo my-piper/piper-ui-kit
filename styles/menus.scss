@@ -57,6 +57,10 @@
                 font-size: .75em;
                 margin-left: $gutter-tiny;
                 background: $graphite-color-50;
+
+                &.success {
+                    background: rgba($color: $success-color, $alpha: .5);
+                }
             }
         }
     }

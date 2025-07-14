@@ -10,7 +10,7 @@ export const UI = {
     accentLight: "#FDBA38",
     accentDark: "#F57F24",
     warning: "#f95741",
-    primary: "#acacac",
+    primary: "#1b2caa",
     grey: "#d9d9d9",
     lightGrey: "#474747",
     textSecondary: "#222222",
