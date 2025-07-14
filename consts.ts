@@ -20,6 +20,7 @@ export const UI = {
     graphite100: "#878787",
     white: "#fff",
     black: "#000",
+    success: "#05A663",
   },
 };
 export const DEFAULT_COUNTRY = Countries.us;
