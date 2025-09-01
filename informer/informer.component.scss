@@ -1,4 +1,5 @@
 @import "src/ui-kit/styles/variables";
+@import "src/ui-kit/styles/mixins";
 
 :host-context(app-modal) {
   border-radius: 20px;
@@ -29,7 +30,11 @@
   align-items: center;
   justify-content: center;
   background: rgba(black, 0.75);
-  padding: 40px;
+  padding: $gutter-small;
+
+  @include wider-mobile() {
+    padding: $gutter-normal;
+  }
 }
 
 p {
