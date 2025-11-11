@@ -29,7 +29,6 @@ $modal-horizontal-spacing: 5px;
 
 .overlay {
   position: fixed;
-  background-color: rgba(0, 0, 0, .55);
   width: 100%;
   height: 100vh;
   left: 0;
@@ -37,6 +36,7 @@ $modal-horizontal-spacing: 5px;
   bottom: 0;
   right: 0;
   z-index: 150;
+  background-color: rgba(0, 0, 0, .55);
   backdrop-filter: blur(5px);
 }
 
@@ -55,8 +55,8 @@ $modal-horizontal-spacing: 5px;
   box-sizing: border-box;
   box-shadow: $shadow-normal;
   border-radius: $corner-large;
-  background-color: white;
-  border: 1px solid $graphite-color-200;
+  background-color: $overlay-background;
+  border: $overlay-border;
 
   z-index: 200;
 
@@ -75,7 +75,8 @@ $modal-horizontal-spacing: 5px;
     border-top-right-radius: $corner-large;
 
     h1 {
-      font-size: 1.2em;
+      font-size: $font-size-big;
+      font-weight: normal;
       margin: 0;
       padding: 0;
       text-transform: none;
@@ -83,7 +84,6 @@ $modal-horizontal-spacing: 5px;
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 100%;
-      color: $primary-color;
     }
 
     .close {
@@ -99,9 +99,14 @@ $modal-horizontal-spacing: 5px;
       button {
         @include reset-button();
 
+        svg {
+          display: block;
+          stroke: $button-text-color;
+        }
+
         &:hover {
           svg {
-            stroke: $accent-color;
+            stroke: $button-hover-text-color;
           }
         }
       }

@@ -27,16 +27,17 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: $primary-dark-color;
+            color: $link-text-color;
+            font-size: $button-font-size;
             line-height: 1.45em;
-            padding-top: 4px;
-            border-bottom: 2px solid transparent;
+            padding: $gutter-small $gutter-normal;
+            border-radius: $corner-large;
 
             &.with-icon {
 
                 .icon {
                     svg {
-                        stroke: $primary-dark-color;
+                        stroke: $link-text-color;
                     }
 
                     &.left {
@@ -50,13 +51,16 @@
             }
 
             &.active {
-                border-color: $primary-dark-color;
+                background-color: $graphite-color-400;
             }
 
             .badge {
-                font-size: .75em;
                 margin-left: $gutter-tiny;
-                background: $graphite-color-50;
+
+                &::before {
+                    content: '|';
+                    padding: 0 $gutter-small 0 0;
+                }
 
                 &.success {
                     background: rgba($color: $success-color, $alpha: .5);
@@ -83,7 +87,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: rgba(white, .5);
+            background-color: rgba($overlay-background, .5);
             backdrop-filter: blur(2px);
         }
 
@@ -97,7 +101,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            border-top: 2px solid $primary-color;
+            border-top: 2px solid white;
             border-right: 2px solid transparent;
             animation: spinner 0.6s linear infinite;
         }
@@ -120,9 +124,10 @@
             align-items: center;
             position: relative;
             color: $primary-text-color;
-            cursor: pointer;
+            font-size: $button-font-size;
             padding: $gutter-small;
             white-space: nowrap;
+            cursor: pointer;
             width: 100%;
 
             &.busy {
@@ -143,13 +148,14 @@
                 }
             }
 
-            &:hover,
-            &.active {
-                color: $active-text-color;
+            &:not(:disabled) {
 
-                .icon {
-                    svg {
-                        stroke: $active-text-color;
+                &:hover,
+                &.active {
+                    color: $button-hover-text-color;
+
+                    .icon svg {
+                        stroke: $button-hover-text-color;
                     }
                 }
             }

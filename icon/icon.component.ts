@@ -14,12 +14,12 @@ export class IconComponent {
   @HostBinding("style.width.px")
   @HostBinding("style.height.px")
   @Input()
-  size: number = 24;
+  size: number = 22;
 
   @Input()
-  color = "black";
+  color = "white";
 
   @HostBinding("attr.data-stroke")
   @Input()
-  stroke = 2;
+  stroke = 1;
 }

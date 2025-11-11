@@ -2,15 +2,14 @@
 
 a {
     cursor: pointer;
-    color: $primary-dark-color;
+    color: $primary-text-color;
 
     &.default {
-        text-decoration: underline;
         display: inline-flex;
         align-items: center;
         text-decoration: none;
         line-height: 1.25em;
-        border-bottom: 2px solid $primary-dark-color;
+        border-bottom: 1px solid $primary-text-color;
 
         &.with-icon {
 
@@ -30,7 +29,7 @@ a {
         }
 
         &:visited {
-            color: $primary-dark-color;
+            color: $primary-text-color;
         }
     }
 }

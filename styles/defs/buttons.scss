@@ -5,46 +5,40 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    line-height: 1.4;
     vertical-align: middle;
+    color: $button-text-color;
+    font-family: $primary-font-family;
+    font-size: $button-font-size;
+    line-height: 1.4;
+    background-color: $button-background-color;
+    border: 1px solid $button-border-color;
+    border-radius: $corner-base;
+    padding: $gutter-small $gutter-huge;
     appearance: none;
-    border: 0;
-    border-radius: 5px;
-    box-shadow:
-        rgba(45, 35, 66, 0.4) 0 2px 4px,
-        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-        rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #fff;
-    padding: 10px 30px;
     position: relative;
     text-decoration: none;
-    transition:
-        box-shadow 0.15s,
-        transform 0.15s;
+    transition: all 0.15s;
     user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow, transform;
-    font-size: 16px;
-    font-family: "JetBrains Mono", monospace;
 
     &.with-icon {
         &.only-icon {
-            padding: 10px;
+            padding: $gutter-small;
         }
 
         .icon {
             svg.stroke {
-                stroke: white;
+                stroke: $button-text-color;
             }
 
             &.left {
-                margin-right: 5px;
+                margin-right: $gutter-small;
             }
 
             &.right {
-                margin-left: 5px;
+                margin-left: $gutter-small;
             }
         }
     }
@@ -57,14 +51,6 @@
         width: 100%;
     }
 
-    &:focus {
-        box-shadow:
-            #3c4fe0 0 0 0 1.5px inset,
-            rgba(45, 35, 66, 0.4) 0 2px 4px,
-            rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-            #3c4fe0 0 -3px 0 inset;
-    }
-
     @keyframes spinner {
         to {
             transform: rotate(360deg);
@@ -72,7 +58,7 @@
     }
 
     &.busy {
-        color: rgba(white, 0.1);
+        color: rgba($button-text-color, 0.1);
         opacity: 0.9;
         pointer-events: none;
 
@@ -91,7 +77,7 @@
             margin-top: -10px;
             margin-left: -10px;
             border-radius: 50%;
-            border-top: 2px solid white;
+            border-top: 2px solid $button-text-color;
             border-right: 2px solid transparent;
             animation: spinner 0.6s linear infinite;
         }
@@ -106,16 +92,11 @@
         cursor: pointer;
 
         &:hover {
-            box-shadow:
-                rgba(45, 35, 66, 0.4) 0 4px 8px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-                #3c4fe0 0 -3px 0 inset;
-            transform: translateY(-2px);
+            background-color: $button-hover-background-color;
         }
 
         &.active,
         &:active {
-            box-shadow: #3c4fe0 0 3px 7px inset;
             transform: translateY(2px);
         }
     }
@@ -123,10 +104,6 @@
 
 %button-primary {
     @extend %button;
-
-    background-image: radial-gradient(100% 100% at 100% 0,
-            #5adaff 0,
-            #5468ff 100%);
 }
 
 %button-small {
@@ -138,27 +115,17 @@
     }
 }
 
-%button-fluid {
-    width: 100%;
-}
-
-%button-secondary {
-    @extend %button;
-
-    background-image: radial-gradient(100% 100% at 100% 0,
-            #999999 0,
-            #666666 100%);
-}
-
 %button-circle {
     @include reset-button();
 
-    display: inline-block;
+    display: inline-flex;
     position: relative;
     border-radius: 50%;
-    background: $primary-light-color;
+    border: 1px solid $button-border-color;
+    background: $button-background-color;
+    box-sizing: border-box;
     aspect-ratio: 1;
-    padding: 8px;
+    padding: $gutter-small;
     transition: all 0.15s;
 
     &:disabled {
@@ -167,15 +134,14 @@
         opacity: .75;
     }
 
-    &:hover {
-        background: $primary-color;
-    }
+    &:not(:disabled) {
+        &:hover {
+            color: $button-hover-text-color;
+            background: $button-hover-background-color;
 
-    &.faded {
-        background: rgba(255, 255, 255, 0.5);
-
-        .icon svg.stroke {
-            stroke: rgb(46, 45, 45) !important;
+            .icon svg {
+                stroke: $button-hover-text-color;
+            }
         }
     }
 
@@ -202,26 +168,20 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 20px;
-            height: 20px;
-            margin-top: -10px;
-            margin-left: -10px;
+            width: 18px;
+            height: 18px;
+            margin-top: -9px;
+            margin-left: -9px;
             border-radius: 50%;
-            border-top: 2px solid $primary-dark-color;
+            border-top: 2px solid $button-text-color;
             border-right: 2px solid transparent;
             animation: spinner 0.6s linear infinite;
         }
     }
 
     .icon {
-        display: block;
-
         svg.stroke {
-            stroke: $primary-dark-color !important;
+            stroke: $button-text-color;
         }
     }
-}
-
-%button-circle-small {
-    padding: 6px;
 }

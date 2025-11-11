@@ -1,6 +1,6 @@
 <img
   #arrow
-  data-arrow
+  class="arrow"
   [src]="'ui-kit/assets/popover-arrow.svg'"
   width="26"
   height="26"
@@ -8,13 +8,12 @@
 
 <div
   class="popover"
-  data-wrapper
   role="popover"
   [ngStyle]="{ 'max-height': options.maxHeight, 'max-width': options.maxWidth }"
 >
-  <div data-title *ngIf="options.title">{{ options.title | i18n }}</div>
+  <div class="title" *ngIf="options.title">{{ options.title | i18n }}</div>
 
-  <div data-content>
+  <div class="content">
     <ng-container *ngIf="!!contentText">{{ contentText }}</ng-container>
     <ng-container #container>
       <ng-container *ngTemplateOutlet="contentTemplate"> </ng-container>

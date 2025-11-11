@@ -39,7 +39,7 @@
     }
 
     &.filled {
-      background-color: #f6f5fb;
+      background-color: $overlay-background;
       padding: $gutter-normal;
       border-radius: 5px;
     }

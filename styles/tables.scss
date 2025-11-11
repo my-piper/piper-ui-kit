@@ -8,13 +8,12 @@
 }
 
 table.default {
-  background-color: #fff;
+  background-color: $control-background-color;
   position: relative;
   border-radius: 10px;
   width: 100%;
   border-collapse: collapse;
   overflow: hidden;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 
   tr {
     &.loading {
@@ -32,7 +31,7 @@ table.default {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          border-top: 2px solid $primary-color;
+          border-top: 2px solid white;
           border-right: 2px solid transparent;
           animation: spinner 0.6s linear infinite;
         }
@@ -41,19 +40,14 @@ table.default {
   }
 
   th {
-    background-color: $primary-color;
     text-align: left;
-    color: white;
     padding: 10px 20px;
   }
 
   td {
-    color: gray;
     padding: 10px;
 
     a.default {
-      text-decoration: none;
-      border-bottom: 1px solid $primary-dark-color;
       padding-bottom: $gutter-tiny;
     }
   }

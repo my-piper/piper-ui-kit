@@ -17,37 +17,35 @@ $graphite-color-300: #303030;
 $graphite-color-400: #222222;
 $graphite-color-500: #1d1d1d;
 
-$primary-color: #5468ff;
-$primary-dark-color: #1b2caa;
-$primary-light-color: #a9b3ff;
+$primary-color: #00D1D1;
+$primary-dark-color: #00D1D1;
+$primary-light-color: #324A5F;
 $green-color: #18e09a;
 $success-color: $green-color;
 $accent-color: orange;
 $error-color: rgba($red-color, 0.75);
 
-$primary-text-color: $graphite-color-300;
-$active-text-color: $primary-dark-color;
+$primary-text-color: $graphite-color-50;
+$active-text-color: $graphite-color-300;
 $secondary-text-color: $graphite-color-400;
-$control-border-color: $graphite-color-75;
-$control-background-color: $primary-light-color;
+
+$corner-small: 2px;
+$corner-base: 4px;
+$corner-large: 8px;
+$corner-huge: 16px;
 
 $primary-background-color: silver;
-
-$corner-small: 4px;
-$corner-base: 8px;
-$corner-large: 16px;
-$corner-huge: 24px;
 
 $font-size-tiny: 12px;
 $font-size-small: 13px;
 $font-size-normal: 14px;
-$font-size-base: 16px;
-$font-size-big: 20px;
-$font-size-large: 24px;
-$font-size-huge: 32px;
+$font-size-base: 14px;
+$font-size-big: 16px;
+$font-size-large: 18px;
+$font-size-huge: 22px;
 $font-weight-bold: bold;
 
-$gutter-base: 4px;
+$gutter-base: 2px;
 $gutter-none: 0;
 $gutter-tiny: $gutter-base;
 $gutter-small: $gutter-base * 2;
@@ -56,7 +54,27 @@ $gutter-big: $gutter-base * 5;
 $gutter-large: $gutter-base * 6;
 $gutter-huge: $gutter-base * 8;
 
-$primary-font-family: "JetBrains Mono", monospace;
+$primary-font-family: "DM Sans", sans-serif;
+$primary-text-color: white;
+
+$link-text-color: $primary-text-color;
 
 $shadow-normal: none;
-$page-background: $graphite-color-300;
+$page-background: #0E0E13;
+
+$overlay-background: $graphite-color-300;
+$overlay-border: 1px solid $graphite-color-200;
+
+$control-text-color: white;
+$control-border-radius: $corner-base;
+$control-border-color: $graphite-color-200;
+$control-highlight-border-color: $graphite-color-75;
+$control-background-color: $graphite-color-400;
+$control-focus-background-color: $graphite-color-300;
+
+$button-background-color: $graphite-color-400;
+$button-hover-background-color: $graphite-color-300;
+$button-border-color: $control-border-color;
+$button-font-size: $font-size-small;
+$button-text-color: $graphite-color-50;
+$button-hover-text-color: white;

@@ -2,7 +2,7 @@
   {{ title | i18n }}
 </ng-template>
 
-<ul class="stack horizontal small">
+<ul class="stack small">
   <ng-container *ngFor="let tab of tabs; let i = index">
     <li *ngIf="!tab.hidden" [attr.data-cy]="tab.selector">
       <a [class.active]="i == active" (click)="activate(i)">

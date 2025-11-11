@@ -11,5 +11,5 @@ export class SpinnerComponent {
   size: string = "normal";
 
   @Input()
-  color: string = UI.color.primary;
+  color: string = UI.color.white;
 }

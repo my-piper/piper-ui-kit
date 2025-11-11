@@ -57,15 +57,14 @@
 }
 
 @mixin vertical-stack($gutter: $gutter-normal) {
-    > :not(:last-child) {
-        margin-bottom: $gutter;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: $gutter;
 }
 
 @mixin horizontal-stack($gutter: $gutter-normal) {
-    > :not(:last-child) {
-        margin-right: $gutter;
-    }
+    display: flex;
+    gap: $gutter;
 }
 
 @mixin placeholder() {
