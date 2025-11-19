@@ -40,15 +40,11 @@ ul {
       transition: all .1s;
 
       &:hover {
-        background-color: rgba($color: $primary-light-color, $alpha: .5);
+        background-color: $control-background-color;
       }
 
       &.active {
-        background-image: radial-gradient(100% 100% at 100% 0,
-            #5adaff 0,
-            #5468ff 100%);
-        color: white;
-        box-shadow: #3c4fe0 0 3px 7px inset;
+        background-color: $control-background-color;
       }
     }
   }
