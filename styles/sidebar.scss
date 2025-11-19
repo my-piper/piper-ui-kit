@@ -10,7 +10,8 @@
   right: 0;
   bottom: 0;
   width: 250px;
-  background-color: $overlay-background;
+  background-color: rgba($overlay-background, 0.85);
+  backdrop-filter: blur(5px);
   padding: $gutter-huge;
   opacity: 1;
   transform: translateX(0);
