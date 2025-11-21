@@ -63,7 +63,8 @@ $shadow-normal: none;
 $page-background: #0E0E13;
 
 $overlay-background: $graphite-color-300;
-$overlay-border: 1px solid $graphite-color-200;
+$overlay-border-color: $graphite-color-200;
+$overlay-border: 1px solid $overlay-border-color;
 
 $control-text-color: white;
 $control-border-radius: $corner-base;

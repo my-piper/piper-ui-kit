@@ -2,7 +2,7 @@
   <ng-container *ngSwitchCase="'more'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -27,13 +27,43 @@
   <ng-container *ngSwitchCase="'out'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M19.1691 4.83066L4.83086 19.1689M19.1691 4.83066H8.41543M19.1691 4.83066V15.5844"
+        d="M16.95 7.05L7.05 16.95"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M10 7L16.95 7.049L17 14"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </ng-container>
+  <ng-container *ngSwitchCase="'in'">
+    <svg
+      class="stroke"
+      [style.stroke]="color"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.05 16.95L16.95 7.05"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M7.05 9.95V16.95"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M14.05 16.95H7.05"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -42,7 +72,7 @@
   <ng-container *ngSwitchCase="'magic'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +157,7 @@
   <ng-container *ngSwitchCase="'on'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +183,7 @@
   <ng-container *ngSwitchCase="'off'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +211,7 @@
   <ng-container *ngSwitchCase="'app'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +296,7 @@
   <ng-container *ngSwitchCase="'unchecked'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -284,7 +314,7 @@
   <ng-container *ngSwitchCase="'checked'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -307,7 +337,7 @@
   <ng-container *ngSwitchCase="'download'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -328,7 +358,7 @@
   <ng-container *ngSwitchCase="'add-circle'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -349,7 +379,7 @@
   <ng-container *ngSwitchCase="'audio'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -376,7 +406,7 @@
   <ng-container *ngSwitchCase="'archive'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -415,7 +445,7 @@
   <ng-container *ngSwitchCase="'password'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -746,7 +776,7 @@
   <ng-container *ngSwitchCase="'select-image'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -789,7 +819,7 @@
   <ng-container *ngSwitchCase="'close'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -802,7 +832,7 @@
   <ng-container *ngSwitchCase="'lang'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1240,7 +1270,7 @@
   <ng-container *ngSwitchCase="'dollar'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1265,7 +1295,7 @@
   <ng-container *ngSwitchCase="'user'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1292,7 +1322,7 @@
   <ng-container *ngSwitchCase="'share'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -1330,7 +1360,7 @@
   <ng-container *ngSwitchCase="'info'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1354,7 +1384,7 @@
   <ng-container *ngSwitchCase="'drag'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1385,7 +1415,7 @@
   <ng-container *ngSwitchCase="'json'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1407,7 +1437,7 @@
   <ng-container *ngSwitchCase="'admin'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1454,7 +1484,7 @@
   <ng-container *ngSwitchCase="'lock'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1477,7 +1507,7 @@
   <ng-container *ngSwitchCase="'chevron-left'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1493,7 +1523,7 @@
   <ng-container *ngSwitchCase="'chevron-right'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1509,7 +1539,7 @@
   <ng-container *ngSwitchCase="'chevron-down'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1525,7 +1555,7 @@
   <ng-container *ngSwitchCase="'play'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1550,7 +1580,7 @@
   <ng-container *ngSwitchCase="'node'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1580,7 +1610,7 @@
   <ng-container *ngSwitchCase="'delete'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1600,7 +1630,7 @@
   <ng-container *ngSwitchCase="'edit'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1628,7 +1658,7 @@
   <ng-container *ngSwitchCase="'menu'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1654,7 +1684,7 @@
   <ng-container *ngSwitchCase="'save'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1676,7 +1706,7 @@
   <ng-container *ngSwitchCase="'upload'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1698,7 +1728,7 @@
   <ng-container *ngSwitchCase="'stop'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1717,7 +1747,7 @@
   <ng-container *ngSwitchCase="'add'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1737,7 +1767,7 @@
   <ng-container *ngSwitchCase="'json'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1754,7 +1784,7 @@
   <ng-container *ngSwitchCase="'copy'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1791,7 +1821,7 @@
   <ng-container *ngSwitchCase="'logout'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1817,7 +1847,7 @@
   <ng-container *ngSwitchCase="'remove'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1837,7 +1867,7 @@
   <ng-container *ngSwitchCase="'input'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1858,7 +1888,7 @@
   <ng-container *ngSwitchCase="'image'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1891,7 +1921,7 @@
   <ng-container *ngSwitchCase="'video'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1916,7 +1946,7 @@
   <ng-container *ngSwitchCase="'error'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1944,7 +1974,7 @@
   <ng-container *ngSwitchCase="'open-link'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1962,7 +1992,7 @@
   <ng-container *ngSwitchCase="'validate'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -1995,7 +2025,7 @@
   <ng-container *ngSwitchCase="'switcher'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -2027,7 +2057,7 @@
   <ng-container *ngSwitchCase="'text'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -2046,7 +2076,7 @@
   <ng-container *ngSwitchCase="'number'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -2071,7 +2101,7 @@
   <ng-container *ngSwitchCase="'help'">
     <svg
       class="stroke"
-      [attr.stroke]="color"
+      [style.stroke]="color"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
