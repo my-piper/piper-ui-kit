@@ -45,3 +45,13 @@ a {
         margin: 0;
     }
 }
+
+pre {
+    background-color: $graphite-color-500;
+    color: $primary-text-color;
+    padding: $gutter-small;
+    border-radius: $corner-small;
+    font-size: 0.75em;
+    overflow-x: auto;
+    margin: 0;
+}

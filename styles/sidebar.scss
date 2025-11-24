@@ -35,6 +35,10 @@
     }
   }
 
+  &.wide {
+    width: 500px;
+  }
+
   >header {
     margin: $gutter-normal;
     text-align: right;
