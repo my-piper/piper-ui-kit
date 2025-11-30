@@ -148,6 +148,10 @@
         }
     }
 
+    &.toggled {
+        background: $button-toggled-background-color;
+    }
+
     &.light {
         background: $graphite-color-50;
 
