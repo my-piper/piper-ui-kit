@@ -10,7 +10,7 @@ import { ModalComponent } from "./modal/modal.component";
 import { ModalDirective } from "./modal/modal.directive";
 import { CountdownPipe } from "./pipes/countdown.pipe";
 import { FileTypePipe } from "./pipes/file-type.pipe";
-import { I18nPipe } from "./pipes/i18n.pipe";
+import { I18nPipe, LabelsPipe } from "./pipes/i18n.pipe";
 import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
 import { LengthPipe } from "./pipes/length.pipe";
 import { MockArrayPipe } from "./pipes/mock-array.pipe";
@@ -48,6 +48,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     LengthPipe,
     SkeletonComponent,
     MockArrayPipe,
+    LabelsPipe,
   ],
   exports: [
     IconComponent,
@@ -71,6 +72,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     LengthPipe,
     SkeletonComponent,
     MockArrayPipe,
+    LabelsPipe,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })

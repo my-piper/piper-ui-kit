@@ -1,38 +1,40 @@
-import { trim } from "lodash";
-import { parse } from "qs";
-import { DEFAULT_LANGUAGE } from "../consts";
+import { parse, stringify } from "qs";
 import { Languages } from "../enums/languages";
 
 const SPLIT_REGEX = /---\s*(\w+)\s*---\s*\n/g;
+const DELIMITER = ";";
+type Labels = { en: string } & { [key in Languages]?: string };
 
-function multiline(text: string, language: Languages): string {
-  const chunks = text.split(SPLIT_REGEX);
-  const en = chunks[0];
-
-  const languages: { [key: string]: string } = {};
-  for (let i = 1; i < chunks.length; i += 2) {
-    const [l, c] = [chunks[i], chunks[i + 1]];
-    languages[l] = c;
-  }
-
-  return languages[language as string] || en;
+export function createLabel(labels: { [key in Languages]?: string }) {
+  return stringify(labels, { delimiter: DELIMITER, encode: false });
 }
 
-export function getLabel(
-  source: string,
-  language: Languages,
-  { mode }: { mode: "inline" | "multiline" } = { mode: "inline" }
-) {
+export function getLabels(source: string): Labels {
+  const mode = SPLIT_REGEX.test(source) ? "multiline" : "inline";
   switch (mode) {
-    case "multiline":
-      return multiline(source, language);
+    case "multiline": {
+      const chunks = source.split(SPLIT_REGEX);
+      const [en] = chunks;
+      console.log(chunks);
+      const languages: Labels = { en };
+      for (let i = 1; i < chunks.length; i += 2) {
+        const [l, c] = [chunks[i], chunks[i + 1]];
+        languages[l as Languages] = c;
+      }
+      return languages;
+    }
     case "inline":
-    default:
-      const labels = parse(source, { delimiter: ";" });
-      return trim(
-        (labels[language] as string) ||
-          (labels[DEFAULT_LANGUAGE] as string) ||
-          source
-      );
+    default: {
+      const languages = parse(source, { delimiter: DELIMITER }) as Labels;
+      return "en" in languages ? languages : { en: source };
+    }
   }
+}
+
+export function getLabel(source: string, language: Languages) {
+  if (!source) {
+    return null;
+  }
+  const languages = getLabels(source);
+  return languages[language] || languages.en;
 }
