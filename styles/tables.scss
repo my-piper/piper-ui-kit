@@ -8,7 +8,7 @@
 }
 
 table.default {
-  background-color: $control-background-color;
+  background-color: rgba($control-background-color, 0.75);
   position: relative;
   border-radius: 10px;
   width: 100%;

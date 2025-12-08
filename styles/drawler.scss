@@ -10,7 +10,7 @@
   backdrop-filter: blur(5px);
   padding: $gutter-huge;
   opacity: 1;
-  transition: all 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
   box-shadow: 0 0 10px rgba(black, 0.5);
   overflow: scroll;
   gap: $gutter-normal;
@@ -26,9 +26,11 @@
     bottom: 0;
     transform: translateX(0);
     width: 250px;
+    max-width: 250px;
 
     &.wide {
       width: 500px;
+      max-width: 500px;
     }
   }
 
