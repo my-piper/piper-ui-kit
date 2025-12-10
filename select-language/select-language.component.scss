@@ -15,9 +15,8 @@ ul {
 
   a {
     @include reset-link();
-    padding: $gutter-small;
+    padding: $gutter-small $gutter-normal;
     border-radius: $corner-small;
-
 
     &.active {
       background-color: $control-background-color;
