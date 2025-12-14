@@ -9,7 +9,6 @@
   background-color: rgba($overlay-background, 0.6);
   backdrop-filter: blur(5px);
   padding: $gutter-huge;
-  opacity: 1;
   transition: transform 150ms ease-in-out;
   box-shadow: 0 0 10px rgba(black, 0.5);
   overflow: scroll;
@@ -39,7 +38,6 @@
     border-right: 1px solid $graphite-color-200;
 
     &.hidden {
-      opacity: 0;
       transform: translateX(-100%);
     }
   }
