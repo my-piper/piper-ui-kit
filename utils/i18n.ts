@@ -15,7 +15,6 @@ export function getLabels(source: string): Labels {
     case "multiline": {
       const chunks = source.split(SPLIT_REGEX);
       const [en] = chunks;
-      console.log(chunks);
       const languages: Labels = { en };
       for (let i = 1; i < chunks.length; i += 2) {
         const [l, c] = [chunks[i], chunks[i + 1]];
