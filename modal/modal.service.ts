@@ -8,7 +8,7 @@ export class ModalService {
 
   private checkRegistration() {
     if (!this.modal) {
-      throw new Error("modal component is not registered");
+      throw new Error("Modal component is not registered");
     }
   }
 
