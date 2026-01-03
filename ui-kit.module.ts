@@ -15,6 +15,8 @@ import { I18nPipe, LabelsPipe } from "./pipes/i18n.pipe";
 import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
 import { LengthPipe } from "./pipes/length.pipe";
 import { MockArrayPipe } from "./pipes/mock-array.pipe";
+import { TickerPipe } from "./pipes/ticker.pipe";
+import { TimeDiffPipe } from "./pipes/time-diff";
 import { TimePassedPipe } from "./pipes/time-passed.pipe";
 import { PopoverComponent } from "./popover/popover.component";
 import { PopoverDirective } from "./popover/popover.directive";
@@ -51,6 +53,8 @@ import { TabsComponent } from "./tabs/tabs.component";
     MockArrayPipe,
     LabelsPipe,
     LetDirective,
+    TimeDiffPipe,
+    TickerPipe,
   ],
   exports: [
     IconComponent,
@@ -76,6 +80,8 @@ import { TabsComponent } from "./tabs/tabs.component";
     MockArrayPipe,
     LabelsPipe,
     LetDirective,
+    TimeDiffPipe,
+    TickerPipe,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })
