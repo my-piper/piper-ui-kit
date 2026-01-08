@@ -17,9 +17,10 @@ $graphite-color-300: #303030;
 $graphite-color-400: #222222;
 $graphite-color-500: #1d1d1d;
 
-$primary-color: #00D1D1;
+$primary-color: rgb(0, 102, 255);
 $primary-dark-color: #00D1D1;
 $primary-light-color: #324A5F;
+
 $green-color: #18e09a;
 $success-color: $green-color;
 $accent-color: orange;
@@ -55,7 +56,7 @@ $gutter-large: $gutter-base * 6;
 $gutter-huge: $gutter-base * 8;
 
 $primary-font-family: "Inter", sans-serif;
-$primary-text-color: white;
+$primary-text-color: $graphite-color-60;
 
 $link-text-color: $primary-text-color;
 
@@ -66,14 +67,14 @@ $overlay-background: $graphite-color-300;
 $overlay-border-color: $graphite-color-200;
 $overlay-border: 1px solid $overlay-border-color;
 
-$control-text-color: white;
+$control-text-color: $primary-text-color;
 $control-border-radius: $corner-base;
 $control-border-color: $graphite-color-200;
 $control-highlight-border-color: $graphite-color-75;
 $control-background-color: $graphite-color-400;
 $control-focus-background-color: $graphite-color-300;
 
-$button-background-color: $graphite-color-400;
+$button-background-color: rgba($graphite-color-400, 0.55);
 $button-hover-background-color: $graphite-color-300;
 $button-toggled-background-color: $graphite-color-200;
 $button-border-color: $control-border-color;

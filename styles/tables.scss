@@ -8,11 +8,11 @@
 }
 
 table.default {
-  background-color: rgba($control-background-color, 0.75);
+  background-image: radial-gradient(circle, #00ff9d0d, #0000 50%), radial-gradient(circle at 80% 20%, #7000ff14, #0000 40%);
   position: relative;
   border-radius: 10px;
+  border: 1px solid rgba($graphite-color-60, 0.1);
   width: 100%;
-  border-collapse: collapse;
   overflow: hidden;
 
   tr {
