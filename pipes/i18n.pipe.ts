@@ -7,8 +7,8 @@ import { getLabel, getLabels } from "../utils/i18n";
 export class I18nPipe implements PipeTransform {
   constructor(@Inject(CURRENT_LANGUAGE) private language: Languages) {}
 
-  transform(source: string): string {
-    return getLabel(source, this.language);
+  transform(source: string, language: Languages = null): string {
+    return getLabel(source, language || this.language);
   }
 }
 
