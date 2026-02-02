@@ -1,10 +1,10 @@
 $yellow-color-50: #fff8eb;
 $yellow-color-75: #ffe3ad;
 $yellow-color-100: #fed88c;
-$yellow-color-200: #FDBA38;
+$yellow-color-200: #fdba38;
 $yellow-color-300: #febb38;
 $yellow-color-400: #b28327;
-$yellow-color-500: #F57F24;
+$yellow-color-500: #f57f24;
 
 $red-color: #f95741;
 
@@ -18,8 +18,8 @@ $graphite-color-400: #222222;
 $graphite-color-500: #1d1d1d;
 
 $primary-color: rgb(0, 102, 255);
-$primary-dark-color: #00D1D1;
-$primary-light-color: #324A5F;
+$primary-dark-color: #00d1d1;
+$primary-light-color: #324a5f;
 
 $green-color: #18e09a;
 $success-color: $green-color;
@@ -56,12 +56,13 @@ $gutter-large: $gutter-base * 6;
 $gutter-huge: $gutter-base * 8;
 
 $primary-font-family: "Inter", sans-serif;
+$monospace-font-family: monospace;
 $primary-text-color: $graphite-color-60;
 
 $link-text-color: $primary-text-color;
 
 $shadow-normal: none;
-$page-background: #0E0E13;
+$page-background: #0e0e13;
 
 $overlay-background: $graphite-color-300;
 $overlay-border-color: $graphite-color-200;
