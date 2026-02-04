@@ -2,6 +2,7 @@ import {
   Directive,
   ElementRef,
   EventEmitter,
+  Input,
   OnDestroy,
   OnInit,
   Output,
@@ -11,6 +12,13 @@ import {
   selector: "[inViewport]",
 })
 export class InViewportDirective implements OnInit, OnDestroy {
+  private root: HTMLElement;
+
+  @Input()
+  set config(config: { root?: HTMLElement }) {
+    this.root = config.root;
+  }
+
   @Output()
   visible = new EventEmitter<void>();
 
@@ -19,6 +27,7 @@ export class InViewportDirective implements OnInit, OnDestroy {
   constructor(private el: ElementRef) {}
 
   ngOnInit() {
+    const { nativeElement } = this.el;
     this.observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,10 +37,10 @@ export class InViewportDirective implements OnInit, OnDestroy {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5, root: this.root },
     );
 
-    this.observer.observe(this.el.nativeElement);
+    this.observer.observe(nativeElement);
   }
 
   ngOnDestroy() {
