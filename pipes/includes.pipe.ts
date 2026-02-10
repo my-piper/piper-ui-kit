@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({ name: "includes", pure: false })
 export class IncludesPipe implements PipeTransform {
-  transform(arr: any[], val: any): boolean {
+  transform(arr: unknown[], val: unknown): boolean {
     return (arr || []).includes(val);
   }
 }
