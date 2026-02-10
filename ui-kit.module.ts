@@ -11,12 +11,13 @@ import { ModalComponent } from "./modal/modal.component";
 import { ModalDirective } from "./modal/modal.directive";
 import { CountdownPipe } from "./pipes/countdown.pipe";
 import { FileTypePipe } from "./pipes/file-type.pipe";
+import { HookPipe } from "./pipes/hook.pipe";
 import { I18nPipe, LabelsPipe } from "./pipes/i18n.pipe";
 import { InvalidFieldPipe } from "./pipes/invalid-field.pipe";
 import { LengthPipe } from "./pipes/length.pipe";
 import { MockArrayPipe } from "./pipes/mock-array.pipe";
 import { TickerPipe } from "./pipes/ticker.pipe";
-import { TimeDiffPipe } from "./pipes/time-diff";
+import { TimeDiffPipe } from "./pipes/time-diff.pipe";
 import { TimePassedPipe } from "./pipes/time-passed.pipe";
 import { PopoverComponent } from "./popover/popover.component";
 import { PopoverDirective } from "./popover/popover.directive";
@@ -55,6 +56,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     LetDirective,
     TimeDiffPipe,
     TickerPipe,
+    HookPipe,
   ],
   exports: [
     IconComponent,
@@ -82,6 +84,7 @@ import { TabsComponent } from "./tabs/tabs.component";
     LetDirective,
     TimeDiffPipe,
     TickerPipe,
+    HookPipe,
   ],
   imports: [CommonModule, ReactiveFormsModule],
 })
