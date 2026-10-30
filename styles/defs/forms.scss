@@ -25,7 +25,7 @@
 %select-primary {
     @extend %input-primary;
     appearance: none;
-    background-image: url('/ui-kit/assets/chevron-down.svg?v=x');
+    background-image: var(--select-chevron);
     background-position: center right $gutter-tiny;
     background-repeat: no-repeat;
     background-size: 24px 24px;
