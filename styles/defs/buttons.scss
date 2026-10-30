@@ -58,7 +58,7 @@
     }
 
     &.busy {
-        color: rgba($button-text-color, 0.1);
+        color: with-alpha($button-text-color, 0.1);
         opacity: 0.9;
 
         &:disabled {

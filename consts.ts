@@ -11,7 +11,7 @@ export const UI = {
     accentDark: "#F57F24",
     warning: "#f95741",
     primary: "#1b2caa",
-    grey: "#d9d9d9",
+    grey: "var(--graphite-60)",
     lightGrey: "#474747",
     textSecondary: "#222222",
     textPrimary: "#eaeaea",

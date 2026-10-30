@@ -8,17 +8,32 @@ $yellow-color-500: #f57f24;
 
 $red-color: #f95741;
 
-$graphite-color-50: #eaeaea;
-$graphite-color-60: #d5d4d4;
-$graphite-color-75: #aaaaaa;
-$graphite-color-100: #878787;
-$graphite-color-200: #535353;
-$graphite-color-300: #303030;
-$graphite-color-400: #222222;
-$graphite-color-500: #1d1d1d;
+// Theme-dependent colors resolve at runtime; values live in themes.scss.
+$graphite-color-50: var(--graphite-50);
+$graphite-color-60: var(--graphite-60);
+$graphite-color-75: var(--graphite-75);
+$graphite-color-100: var(--graphite-100);
+$graphite-color-200: var(--graphite-200);
+$graphite-color-300: var(--graphite-300);
+$graphite-color-400: var(--graphite-400);
+$graphite-color-500: var(--graphite-500);
+
+$strong-text-color: var(--strong-text);
+$icon-color: var(--icon-color);
+$header-background: var(--header-background);
+$inverse-background: var(--inverse-background);
+
+// rgba() for both static Sass colors and runtime CSS variables.
+@function with-alpha($color, $alpha) {
+  @if type-of($color) == "color" {
+    @return rgba($color, $alpha);
+  }
+
+  @return unquote("color-mix(in srgb, #{$color} #{percentage($alpha)}, transparent)");
+}
 
 $primary-color: rgb(0, 102, 255);
-$primary-dark-color: #00d1d1;
+$primary-dark-color: var(--primary-dark);
 $primary-light-color: #324a5f;
 
 $green-color: #18e09a;
@@ -62,7 +77,7 @@ $primary-text-color: $graphite-color-60;
 $link-text-color: $primary-text-color;
 
 $shadow-normal: none;
-$page-background: #0e0e13;
+$page-background: var(--page-background);
 
 $overlay-background: $graphite-color-300;
 $overlay-border-color: $graphite-color-200;
@@ -75,10 +90,10 @@ $control-highlight-border-color: $graphite-color-75;
 $control-background-color: $graphite-color-400;
 $control-focus-background-color: $graphite-color-300;
 
-$button-background-color: rgba($graphite-color-400, 0.55);
+$button-background-color: with-alpha($graphite-color-400, 0.55);
 $button-hover-background-color: $graphite-color-300;
 $button-toggled-background-color: $graphite-color-200;
 $button-border-color: $control-border-color;
 $button-font-size: $font-size-small;
 $button-text-color: $graphite-color-50;
-$button-hover-text-color: white;
+$button-hover-text-color: $strong-text-color;

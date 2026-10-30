@@ -148,7 +148,7 @@ fieldset {
 
     &:has(input:checked),
     &.selected {
-      color: white;
+      color: $strong-text-color;
       background-color: $control-focus-background-color;
     }
 

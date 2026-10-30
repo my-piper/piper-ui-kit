@@ -6,7 +6,7 @@
   flex-direction: column;
   position: fixed;
   z-index: 5;
-  background-color: rgba($overlay-background, 0.6);
+  background-color: with-alpha($overlay-background, 0.6);
   backdrop-filter: blur(5px);
   padding: $gutter-huge;
   transition: transform 150ms ease-in-out;

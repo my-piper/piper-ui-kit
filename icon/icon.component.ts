@@ -17,7 +17,7 @@ export class IconComponent {
   size: number = 22;
 
   @Input()
-  color = "white";
+  color = "var(--icon-color)";
 
   @HostBinding("attr.data-stroke")
   @Input()
