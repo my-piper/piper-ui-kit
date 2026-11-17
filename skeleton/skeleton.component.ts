@@ -1,10 +1,12 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
 import { UI } from "../consts";
 
 @Component({
   selector: "app-skeleton",
   templateUrl: "./skeleton.component.html",
   styleUrls: ["./skeleton.component.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class SkeletonComponent {
   ui = UI;

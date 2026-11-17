@@ -5,7 +5,10 @@ import { UntilDestroyed } from "../helpers/until-destroyed";
 
 const logger = createLogger("ticker", LogLevel.debug);
 
-@Pipe({ name: "ticker" })
+@Pipe({
+  name: "ticker",
+  standalone: false,
+})
 export class TickerPipe<T> extends UntilDestroyed implements PipeTransform {
   private ticker: BehaviorSubject<T>;
   private timer: any | null = null;

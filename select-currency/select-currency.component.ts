@@ -1,5 +1,10 @@
 import { DOCUMENT, Location } from "@angular/common";
-import { Component, Inject, OnInit } from "@angular/core";
+import {
+  Component,
+  Inject,
+  OnInit,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormBuilder } from "@angular/forms";
 import parse from "url-parse";
 import { CURRENCIES_REGIONS } from "../consts";
@@ -7,6 +12,7 @@ import { Currencies } from "../enums/currencies";
 import { CURRENT_CURRENCY } from "../providers/current-currency";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: "app-select-currency",
   templateUrl: "./select-currency.component.html",
   styleUrls: ["./select-currency.component.scss"],
@@ -23,7 +29,7 @@ export class SelectCurrencyComponent implements OnInit {
     @Inject(CURRENT_CURRENCY) public currency: Currencies,
     @Inject(DOCUMENT) private document: Document,
     private fb: FormBuilder,
-    private location: Location
+    private location: Location,
   ) {}
 
   ngOnInit() {

@@ -6,6 +6,7 @@ import {
   HostListener,
   Input,
   OnInit,
+  ChangeDetectionStrategy,
 } from "@angular/core";
 import {
   ControlValueAccessor,
@@ -27,6 +28,8 @@ import { UntilDestroyed } from "../helpers/until-destroyed";
       multi: true,
     },
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class SliderComponent
   extends UntilDestroyed
@@ -66,7 +69,7 @@ export class SliderComponent
 
   constructor(
     private fb: FormBuilder,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
   ) {
     super();
   }
@@ -91,7 +94,7 @@ export class SliderComponent
     const actual = value !== undefined ? value : null;
     this.form.setValue(
       { range: actual, numeric: actual },
-      { emitEvent: false }
+      { emitEvent: false },
     );
     this.cd.detectChanges();
   }

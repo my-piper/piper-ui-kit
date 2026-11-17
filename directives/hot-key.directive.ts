@@ -9,6 +9,7 @@ import {
 
 @Directive({
   selector: "[hotKey]",
+  standalone: false,
 })
 export class HotKeyDirective {
   @Input()

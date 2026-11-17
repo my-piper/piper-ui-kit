@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from "@angular/core";
 
-@Pipe({ name: "fileType" })
+@Pipe({
+  name: "fileType",
+  standalone: false,
+})
 export class FileTypePipe implements PipeTransform {
   transform(url: string): string {
     const match = url.match(/\.([a-zA-Z0-9]+)$/);

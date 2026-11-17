@@ -7,12 +7,15 @@ import {
   Renderer2,
   TemplateRef,
   ViewChild,
+  ChangeDetectionStrategy,
 } from "@angular/core";
 
 @Component({
   selector: "app-informer",
   templateUrl: "./informer.component.html",
   styleUrls: ["./informer.component.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class InformerComponent {
   @Input()

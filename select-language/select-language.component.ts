@@ -1,5 +1,10 @@
-import { DOCUMENT, Location } from "@angular/common";
-import { Component, Inject } from "@angular/core";
+import { Location } from "@angular/common";
+import {
+  Component,
+  Inject,
+  DOCUMENT,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import cookie from "cookiejs";
 import { Languages } from "../enums/languages";
 import { CURRENT_LANGUAGE } from "../providers/current-language";
@@ -11,6 +16,8 @@ const COOKIE_PATH = "/";
   selector: "app-select-language",
   templateUrl: "./select-language.component.html",
   styleUrls: ["./select-language.component.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class SelectLanguageComponent {
   languages = Languages;
@@ -18,7 +25,7 @@ export class SelectLanguageComponent {
   constructor(
     @Inject(CURRENT_LANGUAGE) public lang: Languages,
     @Inject(DOCUMENT) private document: Document,
-    private location: Location
+    private location: Location,
   ) {}
 
   setLanguage(e: MouseEvent, language: Languages) {

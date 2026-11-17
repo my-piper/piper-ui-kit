@@ -1,5 +1,11 @@
 import { DOCUMENT, Location } from "@angular/common";
-import { Component, Inject, Input, OnInit } from "@angular/core";
+import {
+  Component,
+  Inject,
+  Input,
+  OnInit,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormBuilder } from "@angular/forms";
 import parse from "url-parse";
 import { ALL_COUNTIES, CURRENCIES_FOR_COUNTRIES } from "../consts";
@@ -10,6 +16,7 @@ import { CURRENT_COUNTRY } from "../providers/current-country";
 import { CURRENT_LANGUAGE } from "../providers/current-language";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: "app-select-country",
   templateUrl: "./select-country.component.html",
   styleUrls: ["./select-country.component.scss"],
@@ -30,7 +37,7 @@ export class SelectCountryComponent implements OnInit {
     @Inject(CURRENT_COUNTRY) private country: Countries,
     @Inject(DOCUMENT) private document: Document,
     private fb: FormBuilder,
-    private location: Location
+    private location: Location,
   ) {}
 
   ngOnInit() {

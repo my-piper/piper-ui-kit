@@ -1,7 +1,11 @@
 import { Pipe, PipeTransform } from "@angular/core";
 import { Subject } from "rxjs";
 
-@Pipe({ name: "hook", pure: false })
+@Pipe({
+  name: "hook",
+  pure: false,
+  standalone: false,
+})
 export class HookPipe implements PipeTransform {
   current: unknown;
   subject: Subject<unknown>;

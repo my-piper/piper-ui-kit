@@ -3,7 +3,10 @@ import { Languages } from "src/ui-kit/enums/languages";
 import { CURRENT_LANGUAGE } from "../providers/current-language";
 import { getLabel, getLabels } from "../utils/i18n";
 
-@Pipe({ name: "i18n" })
+@Pipe({
+  name: "i18n",
+  standalone: false,
+})
 export class I18nPipe implements PipeTransform {
   constructor(@Inject(CURRENT_LANGUAGE) private language: Languages) {}
 
@@ -12,7 +15,10 @@ export class I18nPipe implements PipeTransform {
   }
 }
 
-@Pipe({ name: "labels" })
+@Pipe({
+  name: "labels",
+  standalone: false,
+})
 export class LabelsPipe implements PipeTransform {
   transform(source: string) {
     return getLabels(source);
