@@ -1,5 +1,5 @@
-import { DOCUMENT, Location } from "@angular/common";
-import { Component, Inject } from "@angular/core";
+import { Location } from "@angular/common";
+import { Component, Inject, DOCUMENT } from "@angular/core";
 import cookie from "cookiejs";
 import { Languages } from "../enums/languages";
 import { CURRENT_LANGUAGE } from "../providers/current-language";

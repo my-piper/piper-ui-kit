@@ -1,4 +1,4 @@
-import { DOCUMENT, isPlatformBrowser } from "@angular/common";
+import { isPlatformBrowser } from "@angular/common";
 import {
   ChangeDetectorRef,
   Component,
@@ -14,6 +14,7 @@ import {
   TemplateRef,
   ViewChild,
   ViewContainerRef,
+  DOCUMENT,
 } from "@angular/core";
 import { filter, takeUntil } from "rxjs/operators";
 import { UI } from "../consts";
