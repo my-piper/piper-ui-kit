@@ -15,6 +15,7 @@ import {
   ViewChild,
   ViewContainerRef,
   DOCUMENT,
+  ChangeDetectionStrategy,
 } from "@angular/core";
 import { filter, takeUntil } from "rxjs/operators";
 import { UI } from "../consts";
@@ -32,6 +33,7 @@ const MAX_HEIGHT_COEFFICIENT = 0.9;
   selector: "app-modal",
   templateUrl: "./modal.component.html",
   styleUrls: ["modal.component.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class ModalComponent extends UntilDestroyed implements OnInit {

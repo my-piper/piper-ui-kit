@@ -6,6 +6,7 @@ import {
   HostListener,
   Input,
   OnInit,
+  ChangeDetectionStrategy,
 } from "@angular/core";
 import {
   ControlValueAccessor,
@@ -27,6 +28,7 @@ import { UntilDestroyed } from "../helpers/until-destroyed";
       multi: true,
     },
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class SliderComponent

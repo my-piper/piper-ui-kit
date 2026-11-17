@@ -1,5 +1,10 @@
 import { Location } from "@angular/common";
-import { Component, Inject, DOCUMENT } from "@angular/core";
+import {
+  Component,
+  Inject,
+  DOCUMENT,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import cookie from "cookiejs";
 import { Languages } from "../enums/languages";
 import { CURRENT_LANGUAGE } from "../providers/current-language";
@@ -11,6 +16,7 @@ const COOKIE_PATH = "/";
   selector: "app-select-language",
   templateUrl: "./select-language.component.html",
   styleUrls: ["./select-language.component.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class SelectLanguageComponent {
