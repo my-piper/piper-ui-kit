@@ -48,7 +48,7 @@ class PopoverPosition {
     public top: number,
     public left: number,
     public shiftX: number = 0,
-    public shiftY: number = 0
+    public shiftY: number = 0,
   ) {}
 }
 
@@ -57,6 +57,7 @@ class PopoverPosition {
   templateUrl: "./popover.component.html",
   styleUrls: ["./popover.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class PopoverComponent implements OnInit, OnDestroy {
   private observers = {
@@ -129,7 +130,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
     private renderer: Renderer2,
     private hostRef: ElementRef,
     private cd: ChangeDetectorRef,
-    @Inject(PLATFORM_ID) private platform: string
+    @Inject(PLATFORM_ID) private platform: string,
   ) {}
 
   ngOnInit() {
@@ -309,7 +310,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
         : 0;
     const position = new PopoverPosition(
       rect.top + offsetTop,
-      rect.left + offsetLeft
+      rect.left + offsetLeft,
     );
     const { nativeElement: host } = this.hostRef;
 
@@ -381,7 +382,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
   show(
     target: HTMLElement,
     content: PopoverContent,
-    options: Partial<PopoverOptions> = {}
+    options: Partial<PopoverOptions> = {},
   ): void {
     this.target = target;
     this.options = new PopoverOptions(options);
@@ -403,7 +404,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
     this.renderer.setAttribute(
       this.hostRef.nativeElement,
       "data-dropdown",
-      this.options.behavior === "dropdown" ? "true" : "false"
+      this.options.behavior === "dropdown" ? "true" : "false",
     );
     this.renderer.setStyle(this.hostRef.nativeElement, "display", "block");
     this.cd.detectChanges();
@@ -434,7 +435,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
         this.options.behavior !== "dropdown" &&
         (this.position === Position.top || this.position === Position.bottom)
         ? "100%"
-        : "auto"
+        : "auto",
     );
     const position = this.getPosition();
     const rect = this.target.getBoundingClientRect();
@@ -457,7 +458,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
           "width",
           this.breakpoint.current === Breakpoint.mobile
             ? this.options.maxWidth
-            : "auto"
+            : "auto",
         );
         left =
           rect.left -
@@ -481,7 +482,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
           this.renderer.setStyle(
             this.arrow.nativeElement,
             "left",
-            `calc(50% + ${position.shiftX}px)`
+            `calc(50% + ${position.shiftX}px)`,
           );
           break;
         }
@@ -490,7 +491,7 @@ export class PopoverComponent implements OnInit, OnDestroy {
           this.renderer.setStyle(
             this.arrow.nativeElement,
             "top",
-            `calc(50% + ${position.shiftY}px`
+            `calc(50% + ${position.shiftY}px`,
           );
           break;
         }

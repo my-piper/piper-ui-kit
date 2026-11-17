@@ -10,6 +10,7 @@ import {
 
 @Directive({
   selector: "[inViewport]",
+  standalone: false,
 })
 export class InViewportDirective implements OnInit, OnDestroy {
   private root: HTMLElement;

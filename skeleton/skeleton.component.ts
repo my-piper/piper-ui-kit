@@ -5,6 +5,7 @@ import { UI } from "../consts";
   selector: "app-skeleton",
   templateUrl: "./skeleton.component.html",
   styleUrls: ["./skeleton.component.scss"],
+  standalone: false,
 })
 export class SkeletonComponent {
   ui = UI;

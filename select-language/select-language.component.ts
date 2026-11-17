@@ -11,6 +11,7 @@ const COOKIE_PATH = "/";
   selector: "app-select-language",
   templateUrl: "./select-language.component.html",
   styleUrls: ["./select-language.component.scss"],
+  standalone: false,
 })
 export class SelectLanguageComponent {
   languages = Languages;
@@ -18,7 +19,7 @@ export class SelectLanguageComponent {
   constructor(
     @Inject(CURRENT_LANGUAGE) public lang: Languages,
     @Inject(DOCUMENT) private document: Document,
-    private location: Location
+    private location: Location,
   ) {}
 
   setLanguage(e: MouseEvent, language: Languages) {

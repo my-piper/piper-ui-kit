@@ -13,6 +13,7 @@ import {
   selector: "app-informer",
   templateUrl: "./informer.component.html",
   styleUrls: ["./informer.component.scss"],
+  standalone: false,
 })
 export class InformerComponent {
   @Input()

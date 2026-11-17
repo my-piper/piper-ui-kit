@@ -10,7 +10,10 @@ function decimalPlaces(num: number) {
   return 0;
 }
 
-@Pipe({ name: "countdown" })
+@Pipe({
+  name: "countdown",
+  standalone: false,
+})
 export class CountdownPipe implements PipeTransform {
   timer: any | null = null;
   prev: number | null = null;

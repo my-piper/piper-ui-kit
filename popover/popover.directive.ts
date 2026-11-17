@@ -17,6 +17,7 @@ import { PopoverInstance, PopoverService } from "./popover.service";
 @Directive({
   selector: "[appPopover]",
   exportAs: "appPopover",
+  standalone: false,
 })
 export class PopoverDirective implements OnInit, OnDestroy {
   private options: Partial<PopoverOptions> & { content: PopoverContent };
@@ -43,7 +44,7 @@ export class PopoverDirective implements OnInit, OnDestroy {
 
   @Input("appPopover")
   set __options__(
-    options: Partial<PopoverOptions> & { content: PopoverContent }
+    options: Partial<PopoverOptions> & { content: PopoverContent },
   ) {
     this.options = Object.assign(new PopoverOptions(options), {
       content: options.content,
@@ -60,7 +61,7 @@ export class PopoverDirective implements OnInit, OnDestroy {
     private popover: PopoverService,
     private hostRef: ElementRef,
     private renderer: Renderer2,
-    private zone: NgZone
+    private zone: NgZone,
   ) {}
 
   ngOnInit() {
@@ -68,8 +69,8 @@ export class PopoverDirective implements OnInit, OnDestroy {
       .pipe(
         takeWhile(() => !this.destroyed),
         filter(
-          (target) => !!this.instance && target !== this.hostRef.nativeElement
-        )
+          (target) => !!this.instance && target !== this.hostRef.nativeElement,
+        ),
       )
       .subscribe(() => (this.instance = null));
 
@@ -84,7 +85,7 @@ export class PopoverDirective implements OnInit, OnDestroy {
           ) {
             this.hide(path);
           }
-        })
+        }),
       );
       this.listeners.push(
         this.renderer.listen("document", "click", (e: Event) => {
@@ -96,7 +97,7 @@ export class PopoverDirective implements OnInit, OnDestroy {
           ) {
             this.hide(path);
           }
-        })
+        }),
       );
     });
   }
@@ -136,7 +137,7 @@ export class PopoverDirective implements OnInit, OnDestroy {
       this.instance = this.popover.show(
         this.hostRef,
         this.options.content,
-        this.options
+        this.options,
       );
     }
   }

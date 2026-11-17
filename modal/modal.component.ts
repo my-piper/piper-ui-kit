@@ -31,6 +31,7 @@ const MAX_HEIGHT_COEFFICIENT = 0.9;
   selector: "app-modal",
   templateUrl: "./modal.component.html",
   styleUrls: ["modal.component.scss"],
+  standalone: false,
 })
 export class ModalComponent extends UntilDestroyed implements OnInit {
   ui = UI;
@@ -87,7 +88,7 @@ export class ModalComponent extends UntilDestroyed implements OnInit {
     private hostRef: ElementRef,
     private cd: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platform: string
+    @Inject(PLATFORM_ID) private platform: string,
   ) {
     super();
   }
@@ -113,7 +114,7 @@ export class ModalComponent extends UntilDestroyed implements OnInit {
             HEADER_HEIGHT -
             VERTICAL_CONTENT_PADDING -
             BORDER_WIDTH,
-          height
+          height,
         );
         options.width =
           contentHeight * ratio +
@@ -145,7 +146,7 @@ export class ModalComponent extends UntilDestroyed implements OnInit {
         .beforeClose(reason)
         .pipe(
           takeUntil(this.destroyed$),
-          filter((close: boolean) => close)
+          filter((close: boolean) => close),
         )
         .subscribe(() => action());
     } else {

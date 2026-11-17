@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from "@angular/router";
   selector: "app-tabs",
   templateUrl: "./tabs.component.html",
   styleUrls: ["./tabs.component.scss"],
+  standalone: false,
 })
 export class TabsComponent {
   @Input()
@@ -36,7 +37,7 @@ export class TabsComponent {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   activate(index: number) {

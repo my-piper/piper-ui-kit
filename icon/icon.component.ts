@@ -4,6 +4,7 @@ import { Component, HostBinding, Input } from "@angular/core";
   selector: "app-icon",
   templateUrl: "./icon.component.html",
   styleUrls: ["./icon.component.scss"],
+  standalone: false,
 })
 export class IconComponent {
   @Input()

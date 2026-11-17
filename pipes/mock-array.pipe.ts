@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from "@angular/core";
 
-@Pipe({ name: "mockArray" })
+@Pipe({
+  name: "mockArray",
+  standalone: false,
+})
 export class MockArrayPipe implements PipeTransform {
   transform(count: number, start: number = 0): number[] {
     return count > 0

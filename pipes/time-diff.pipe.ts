@@ -7,7 +7,11 @@ import {
 } from "date-fns";
 import { DATE_LOCALE } from "src/ui-kit/providers/date-locale";
 
-@Pipe({ name: "timeDiff", pure: false })
+@Pipe({
+  name: "timeDiff",
+  pure: false,
+  standalone: false,
+})
 export class TimeDiffPipe implements PipeTransform {
   constructor(@Inject(DATE_LOCALE) private locale: Locale) {}
 
